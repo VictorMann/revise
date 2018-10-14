@@ -1,0 +1,2641 @@
+/* * * * * * * * * * * * *
+ *				2018-08-24
+ *
+ *		Bootstrap
+ *
+ *				Maujor
+ * * * * * * * * * * * * */
+
+<!-- 
+	Todo conteúdo fica dentro de um bloco
+	com a classe "container"
+	
+	.col-xs-* 	< 768px
+	.col-sm-*	768px a 991px	= 750px
+	.col-md-*	991px a 1199px	= 970px
+	.col-lg-*	> 1199px		= 1170px
+-->
+<div class="container">
+	<div class="row"> <!-- max 12 cel -->
+		<div class="col-xs-6">6</div>
+		<div class="col-xs-4">4</div>
+		<div class="col-xs-2">2</div>
+	</div>
+</div> <!-- /.container -->
+
+<!-- container fluido 100% da tela -->
+<div class="container-fluid">
+	<!-- content... -->
+</div>
+
+
+
+
+<!-- 
+	Espaçamento à esquerda da coluna 
+	
+	.col-md-offset-*
+	
+	[.../c3/espacando-colunas.html]
+-->
+<div class="container">
+	<div class="row">
+		<div class="col-md-3">3</div>
+		<div class="col-md-2 col-md-offset-3">2</div>
+		<div class="col-md-1 col-md-offset-3">1</div>
+	</div> <!-- /.row -->
+	<div class="row">
+		<div class="col-md-5 col-md-offset-2">5</div>
+		<div class="col-md-4 col-md-offset-1">4</div>
+	</div> <!-- /.row -->
+	<div class="row">
+		<div class="col-md-8 col-md-offset-2">8</div>
+	</div> <!-- /.row -->
+</div> <!-- /.container -->
+
+
+
+<!--
+	Aninhando colunas
+	
+	[.../c3/aninhando-colunas.html]
+-->
+<div class="container">
+	<div class="row">
+		<div class="col-md-8">
+			8
+			<div class="row">
+				<div class="col-md-2">2</div>
+				<div class="col-md-7">7</div>
+				<div class="col-md-3">3</div>
+			</div> <!-- /.row -->
+		</div>
+		<div class="col-md-4">
+			4
+			<div class="row">
+				<div class="col-md-6">6</div>
+				<div class="col-md-6">6</div>
+			</div> <!-- /.row -->
+		</div>
+	</div> <!-- /.row -->
+</div> <!-- /.container -->
+
+
+
+
+<!--
+	Ordenando colunas
+	
+	.col-md-push-*
+	.col-md-pull-*
+	
+	[.../c3/ordenando-colunas.html]
+-->
+<div class="container">
+	<div class="row">
+		<div class="col-md-5 col-md-push-7">5</div>
+		<div class="col-md-7 col-md-pull-5">7</div>
+	</div> <!-- /.row -->
+</div> <!-- /.container -->
+
+
+
+
+<!--
+	Estilização do elemento BODY
+	padrão para todos, exceto: <kbd>, <sample>, <pre>, <code>
+-->
+<style rel="stylesheet">
+body {
+	margin: 0;
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-size: 14px;
+	line-height: 1.42857143;
+	color: #333;
+	background-color: #fff;
+}
+</style>
+
+
+
+<!--
+	Estilização dos elementos H1-H6
+	
+	Notar que está prevista uma classe com o nome igual 
+	ao nome da tag de cabeçalho e se destina a uso geral.
+	
+	<SMALL> dentro de h1-h6 fica em cor cinza clara e tamanho 
+	de fonte 80% do tamanho. 
+	Opcionalmente pode-se usar a classe small para obter o 
+	mesmo efeito.
+	
+	[.../c3/estilização-de-cabecalhos.html]
+-->
+<style rel="stylesheet">
+h1, .h1 { font-size: 36px; }
+h2, .h2 { font-size: 30px; }
+h3, .h3 { font-size: 24px; }
+h4, .h4 { font-size: 18px; }
+h5, .h5 { font-size: 14px; }
+h6, .h6 { font-size: 12px; }
+</style>
+
+<div class="container">
+	<div class="row">
+		<div class="col-md-12">
+			<h1>h1 - Cabeçalho nível 1 <small>Texto small</small> </h1>
+			<h2>h2 - Cabeçalho nível 2 <small>Texto small</small> </h2>
+			<h3>h3 - Cabeçalho nível 3 <small>Texto small</small> </h3>
+			<h4>h4 - Cabeçalho nível 4 <small>Texto small</small> </h4>
+			<h5>h5 - Cabeçalho nível 5 <small>Texto small</small> </h5>
+			<h6>h6 - Cabeçalho nível 6 <small>Texto small</small> </h6>
+		</div>
+	</div> <!-- /.row -->
+</div> <!-- /.container -->
+
+
+
+<!--
+	Estilização de elementos para TEXTOS INLINE
+	
+	[.../c3/estilizacao-de-elementos-para-textos-inline.html]
+-->
+<div class="container">
+	<div class="row">
+		<div class="col-md-12">
+			<mark>Estilização do elemento></mark> <code>mark</code><hr>
+			<del>Estilização do elemento</del> <code>del</code><hr>
+			<ins>Estilização do elemento</ins> <code>ins</code><hr>
+			<s>Estilização do elemento</s> <code>s</code><hr>
+			<u>Estilização do elemento</u> <code>u</code><hr>
+			<em>Estilização do elemento</em> <code>em</code><hr>
+			<strong>Estilização do elemento</strong> <code>strong</code><hr>
+			<i>Estilização do elemento</i> <code>i</code><hr>
+			<b>Estilização do elemento <code>b</code></b><hr>
+			<small>Estilização do elemento <code>small</code></small>
+		</div>
+	</div> <!-- /.row -->
+</div> <!-- /.container -->
+
+
+
+
+<!--
+	Estilização do elemento ABBR
+	
+	É usado para marcar abreviaturas
+	
+	.initialism		(font-size: 90%)
+	
+	[.../c3/estilizacao-do-elemento-abbr.html]
+-->
+<div class="container">
+	<div class="row">
+		<div class="col-sm-12">
+		
+			<abbr title="HyperTextMarkupLanguage">HTML</abbr> 
+			é a linguagem de marcação para aplicações web.
+			<abbr title="HyperTextMarkupLanguage" class="initialism">HTML</abbr> 
+			é a linguagem de marcação para aplicações web.
+			
+		</div>
+	</div>
+</div> <!-- /.container -->
+
+
+
+
+<!-- 
+	Estilização do elemento ADDRESS
+	
+	[.../c3/estilizacao-do-elemento-address.html]
+-->
+<div class="container">
+	<div class="row">
+		<div class="col-md-12">
+			
+			<p>Contato com o autor do artigo:</p>
+			
+			<address>
+				<strong>Maurício Samy Silva</strong><br>
+				Rua: General Paulino 123 sala 4567<br>
+				<abbr title="Código de endereçamento postal">CEP</abbr>: 00000-000<br>
+				Carapena, AM.
+			</address>
+			
+		</div>
+	</div> <!-- /.row -->
+</div> <!-- /.container -->
+
+
+
+
+<!-- 
+	Estilização dos elementos BLOCKQUOTE e CITE
+	
+	.blockquote-reverse
+	
+	[.../c3/estilizacao-do-elemento-blockquote.html]
+-->
+<blockquote cite="http://www.editoranovatec.com.br...">
+	<p>A tentativa de o W3C evoluir...</p>
+	<footer>
+		<cite title="HTML5 A linguagem de marcação que revolucionou a web">
+			Maujor, ...
+		</cite>
+	</footer>
+</blockquote>
+
+<!-- class="blockquote-reverse" -->
+<blockquote cite="http://www.editoranovatec.com.br..." class="blockquote-reverse">
+	<p>A tentativa de o W3C evolui...</p>
+	<footer>
+		<cite title="HTML5 A linguagem de marcação que revolucionou a web">
+			Maujor, ...
+		</cite>
+	</footer>
+</blockquote>
+
+
+
+
+<!--
+	Estilização de elementos de LISTA = UL OL DL
+	
+	.list-unstyled
+	.list-inline
+	.dl-horizontal
+	
+	[.../c3/estilizacao-de-listas.html]
+-->
+<h3>Lista não ordenada</h3>
+<ul>
+	<li>Abacaxi</li>
+	<li>
+		Laranja
+		<ul>
+			<li>Lima</li>
+			<li>Bahia</li>
+		</ul>
+	</li>
+	<li>Maçã</li>
+</ul>
+
+<h3>Lista ordenada</h3>
+<ol>
+	<li>Abacaxi</li>
+	<li>
+		Laranja
+		<ul>
+			<li>Lima</li>
+			<li>Bahia</li>
+		</ul>
+	</li>
+	<li>Maçã</li>
+</ol>
+
+<h3>Lista sem marcadores</h3>
+<ul class="list-unstyled">
+	<li>Abacaxi</li>
+	<li>
+		Laranja
+		<ul>
+			<li>Lima</li>
+			<li>Bahia</li>
+		</ul>
+	</li>
+	<li>Maçã</li>
+</ul>
+
+<h3>Lista não ordenada inline</h3>
+<ul class="list-inline">
+	<li>Abacaxi</li>
+	<li>Laranja</li>
+	<li>Lima</li>
+	<li>Bahia</li>
+	<li>Maçã</li>
+</ul>
+
+<h3>Lista de definição padrão</h3>
+<dl>
+	<dt>Abacaxi</dt>
+	 <dd>Ananás ou abacaxi...</dd>
+	<dt>Laranja</dt>
+	 <dd>A laranja é o fruto...</dd>
+	<dt>Maçã</dt>
+	 <dd>A maçã é o fruto pomáceo...</dd>
+</dl>
+</div>
+
+<h3>Lista de definição horizontal</h3>
+<dl class="dl-horizontal">
+	<dt>Abacaxi</dt>
+	 <dd>Ananás ou abacaxi é uma...</dd>
+	<dt>Laranja</dt>
+	 <dd>A laranja é o fruto produzido...</dd>
+	<dt>Maçã</dt>
+	 <dd>A maçã é o fruto pomáceo...</dd>
+</dl>
+
+
+
+
+<!--
+	Códigos
+	
+	KBD, VAR, SAMP, CODE, PRE
+	
+	limita altura elem pre a 350px 
+	definindo barras de rolagem:
+	
+	.pre-scrollable 
+	
+	[.../c3/estilizacao-de-elementos-para-codigo.html]
+-->
+<h3>Elemento &lt;CODE&gt;</h3>
+<p>Os elementos <code>&lt;div&gt;</code> e <code>&lt;span&gt;</code>não têm valor semântico.</p>
+
+<h3>Elemento &lt;KBD&gt;</h3>
+<p>Para aumentar pressione <kbd>Ctr +</kbd></p>
+
+<h3>Elemento &lt;VAR&gt;</h3>
+<p>A equação da reta é <var>y</var> = a<var>x</var> + b</p>
+
+<h3>Elemento &lt;SAMP&gt;</h3>
+<p>Os retorno do script foi <samp>true</samp></p>
+
+<pre>
+	&lt;!DOCTYPE html>
+	&lt;html lang="pt-br">
+	&lt;head>
+	...
+</pre>
+
+<pre class="pre-scrollable"> <!-- max-height: 350px -->
+	&lt;!DOCTYPE html>
+	&lt;html lang="pt-br">
+	&lt;head>
+	...
+</pre>
+
+
+
+<!--
+	Tabelas
+	
+	.table				| basic
+	.table-striped		| zebra
+	.table-bordered		| bordas
+	.table-hover		| hover nas linhas
+	.table-condensed	| compacta linhas
+	
+	classes de contexto
+	
+	<tr class="*">
+	.active		| cinza 
+	.success	| verde
+	.info		| azul 
+	.warning	| amarela
+	.danger		| salmão
+	
+	
+	[.../c3/estilizacao-basica-de-tabela.html]
+	[.../c3/estilizacao-de-tabela-efeito-hover.html]
+	[.../c3/estilizacao-de-tabela-com-bordas.html]
+	[.../c3/estilizacao-de-tabela-efeito-zebra.html]
+	[.../c3/estilizacao-de-tabela-condensada.html]
+	[.../c3/estilizacao-de-tabela-com-classes-de-contexto.html]
+-->
+<table class="table table-striped">
+	<caption>Estoque de frutas</caption>
+	<thead>
+		<tr>
+			<th scope="col">No.</th>
+			<th scope="col">Fruta</th>
+			<th scope="col">Estoque<br>(kg)</th>
+			<th scope="col">Preço/caixa<br>(R$)</th>
+		</tr>
+	</thead>
+	<tfoot>
+		<tr>
+			<td colspan="4">Valores finais para o mês de fevereiro/2012</td>
+		</tr>
+	</tfoot>
+	<tbody>
+		<tr class="info">
+			<td>1</td>
+			<td>Abacaxi</td>
+			<td>270</td>
+			<td>125,90</td>
+		</tr>
+		<!-- mais três linhas de frutas -->
+	</tbody>
+</table>
+
+<!-- 
+	Estilização responsiva 
+	
+	eliminar o comportamento de contração da tabela em viewports
+	com largura inferior a 768px e criar uma barra de rolagem 
+	horizontal para a tabela.
+	
+	
+	.table-responsive
+	
+	
+	[.../c3/estilizacao-de-tabela-responsiva.html]
+-->
+<div class="table-responsive">
+	<table class="table">
+		<!-- marcação da tabela -->
+	</table>
+</div>
+
+
+
+
+<!--
+	Estilização de BOTÕES
+	
+	.btn				| cinza sem efeito
+	.btn-default		| cinza claro
+	.btn-primary		| azul
+	.btn-success		| verde
+	.btn-info			| azul claro
+	.btn-warning		| amarelo
+	.btn-danger			| salmão
+	.btn-link			| sem efeito
+	
+	dimensão
+	
+	.btn-xs
+	.btn-sm
+	.btn-md
+	.btn-lg
+	
+	outras classes
+	
+	.btn-block
+	.active
+	.disabled
+	
+	
+	[.../c3/outras-classes-para-botoes.html]
+-->
+<button type="button" class="btn btn-primary">button primary</button>
+<button type="button" class="btn btn-default">button default</button>
+<input type="submit" class="btn btn-success" value="input-submit success">
+<input type="button" class="btn btn-warning" value="input-button warning">
+<input type="reset" class="btn" value="input-reset warning">
+<a href="#" class="btn btn-dange">button danger</a>
+<button type="button" class="btn btn-link">button link</button>
+
+<!-- Dimensão de botão -->
+<button type="button" class="btn btn-active btn-lg">botão maior</button>
+<button type="button" class="btn btn-active">botão padrão</button>
+<button type="button" class="btn btn-active btn-sm">botão pequeno</button>
+<button type="button" class="btn btn-active btn-xs">botão muito pequeno</button>
+
+<!-- active | disabled | btn-block -->
+<!-- [.../c3/outras-classes-para-botoes.html] -->
+<div class="col-md-6">
+	<button type="button" class="btn btn-info btn-block">botão nível de bloco</button>
+	<button type="button" class="btn btn-success btn-block">botão nível de bloco</button>
+	<button type="button" class="btn btn-danger btn-block">botão nível de bloco</button>
+</div>
+<div class="col-md-6">
+	<button type="button" class="btn btn-info active">botão estado ativo</button>
+	<button type="button" class="btn btn-success active">botão estado ativo</button>
+	<button type="button" class="btn btn-danger active">botão estado ativo</button>
+</div>
+<div class="col-md-6">
+	<button type="button" class="btn btn-info disabled">botão desabilitado</button>
+	<button type="button" class="btn btn-success disabled">botão desabilitado</button>
+	<button type="button" class="btn btn-danger disabled">botão desabilitado</button>
+</div>
+
+
+
+
+<!--
+	Estilização de CHECKBOX
+	
+	renderizados em blocks
+	
+	para inline use: 
+	
+	.checkbox-inline
+	
+	[.../c3/estilizacao-de-checkbox.html]
+-->
+<div class="checkbox">
+	<label><input type="checkbox">Opção1</label>
+</div>
+
+<!-- .checkbox-inline -->
+<div class="checkbox">
+	<label class="checkbox-inline"><input type="checkbox">Opção1</label>
+	<label class="checkbox-inline"><input type="checkbox">Opção2</label>
+	<label class="checkbox-inline"><input type="checkbox">Opção3</label>
+</div>
+
+<!-- Forma de botões -->
+<div class="btn-group" data-toggle="buttons">
+	<label class="btn btn-primary active"> <!-- .active -->
+		<input type="checkbox" autocomplete="off" checked />Opção 1 (marcado)
+	</label>
+	<label class="btn btn-primary">
+		<input type="checkbox" autocomplete="off" />Opção 2
+	</label>
+	<label class="btn btn-primary">
+		<input type="checkbox" autocomplete="off" />Opção 3
+	</label>
+</div>
+
+
+
+
+<!-- 
+	Estilização de botão RADIO
+	
+	renderizados em blocks
+	
+	para inline use: 
+	
+	.radio-inline
+	
+	[.../c3/estilização-de-botao-radio.html]
+-->
+<div class="radio">
+	<label><input type="radio" name="opcoes1" />Opção1</label>
+</div>
+
+<!-- .radio-inline -->
+<div class="radio">
+	<label class="radio-inline"><input type="radio">Opção1</label>
+	<label class="radio-inline"><input type="radio">Opção2</label>
+	<label class="radio-inline"><input type="radio">Opção3</label>
+</div>
+
+<!-- Forma de botões -->
+<div class="btn-group" data-toggle="buttons">
+	<label class="btn btn-primary">
+		<input type="radio" autocomplete="off"> Radio 1
+	</label>
+	<label class="btn btn-primary">
+		<input type="radio" autocomplete="off"> Radio 2
+	</label>
+	<label class="btn btn-primary">
+		<input type="radio" autocomplete="off"> Radio 3
+	</label>
+</div>
+
+
+
+
+<!--
+	Estilização de SELECT
+	
+	A largura deste elemento é igual a largura
+	do seu container.
+	
+	.form-control
+	
+	[.../c3/estilizacao-de-select.html]
+-->
+<select class="form-control">
+	<option>Opção 1</option>
+	<option>Opção 2</option>
+	<option>Opção 3</option>
+</select>
+
+<!-- multiple +1 opção -->
+<select class="form-control" multiple>
+	<option>Opção 1</option>
+	<option>Opção 2</option>
+	<option>Opção 3</option>
+</select>
+
+
+
+
+<!--
+	Texto de ajuda em controles
+	
+	.help-block
+	
+	[.../c3/estilizacao-texto-de-ajuda.html]
+-->
+<div class="form-group">  
+	<input type="text" class="form-control" placeholder="Seu CPF" aria-describedby="helpBlock1">
+	<span id="helpBlock1" class="help-block">somente números</span>
+	
+	<input type="text" class="form-control" placeholder="Data nascimento" aria-describedby="helpBlock2">
+	<span id="helpBlock2" class="help-block">dd/mm/yyyy</span>
+</div>
+
+
+<!--
+	Estilização de formulário
+	
+	.form-inline
+	.form-group
+	.form-control
+	
+	[.../c3/estilizacao-padrao-e-em-linha-de-formulario.html]
+-->
+<form>
+	<div class="form-group">
+		<label for="email">Email</label>
+		<input type="email" class="form-control" id="email" placeholder="Entre seu email">
+	</div>
+	<div class="form-group">
+		<label for="senha">Senha</label>
+		<input type="password" class="form-control" id="senha" placeholder="Senha">
+	</div>
+	<div class="form-group">
+		<h3>Escolha as cores</h3>
+		<div class="checkbox"><label><input type="checkbox">Azul</label></div>       
+		<div class="checkbox"><label><input type="checkbox">Verde</label></div>       
+		<div class="checkbox"><label><input type="checkbox">Vermelha</label></div>
+	</div>
+	<button type="submit" class="btn btn-default">Enviar</button>
+</form>
+
+<!-- inline -->
+<form class="form-inline">
+	<!-- conteúdo idem anterior -->
+	<!-- todos descendentes inline-block -->
+</form>
+
+
+
+
+<!--
+	Imagens
+	
+	.img-rounded	| cantos arredondados raio 6px
+	.img-circle		| raio 50% circulo
+	.img-thumbnail	| Aplica na imagem um padding de 4px e uma borda 
+  					  de 1px na cor cinza.
+
+	img-responsive	| no bootstrap por padrao as imagens n são 
+	 				  responsivas	
+	
+	[.../c3/estilizacao-de-imagem.html]
+	
+para deixar responsivas:
+-->
+img {
+	display: block;
+	max-width: 100%; 
+	height: auto;
+}
+<img class="img-responsive img-circle" src="imagem.jpg">
+<img class="img-responsive img-rounded" src="imagem.jpg">
+<img class="img-responsive img-thumbnail" src="imagem.jpg">
+
+
+
+
+<!-- # CLASSES AUXILIARES -->
+
+<!-- 
+	Cores contextuais
+	
+	Textos com uma cor
+	
+	.text-muted		| Estiliza textos na cor #777
+	.text-primary 	| cor #337ab7
+	.text-success	| cor #3c763d
+	.text-info		| cor #31708f
+	.text-warning	| cor #a94442
+	
+	[.../c3/estilizacao-de-textos-com-cores.html]
+-->
+<p class="text-muted">Este é um texto estilizado com a classe <code>text-muted</code></p>
+<p class="text-primary">Este é um texto estilizado com a classe <code>text-primary</code></p>
+<p class="text-success">Este é um texto estilizado com a classe <code>text-success</code></p>
+<p class="text-info">Este é um texto estilizado com a classe <code>text-info</code></p>
+<p class="text-warning">Este é um texto estilizado com a classe <code>text-warning</code></p>
+<p class="text-danger">Este é um texto estilizado com a classe <code>text-danger</code></p>    
+
+
+
+
+<!-- 
+	Fundos contextuais
+	
+	Fundo de um box com uma cor
+	
+	.bg-primary		| cor #337ab7
+	.bg-success 	| cor #dff0d8
+	.bg-info 		| cor #d9edf7
+	.bg-warning 	| cor #fcf8e3
+	.bg-danger 		| cor #f2dede
+	
+	[.../c3/estilizacao-de-fundos-com-cores.html]
+-->
+<p class="bg-muted">Este é um box com cor de fundo estilizada com a classe <code>muted</code></p>
+<p class="bg-primary">Este é um box com cor de fundo estilizada com a classe <code>bg-primary</code></p>
+<p class="bg-success">Este é um box com cor de fundo estilizada com a classe <code>bg-success</code></p>
+<p class="bg-info">Este é um box com cor de fundo estilizada com a classe <code>bg-info</code></p>
+<p class="bg-warning">Este é um box com cor de fundo estilizada com a classe <code>bg-warning</code></p>
+<p class="bg-danger">Este é um box com cor de fundo estilizada com a classe <code>bg-danger</code></p>    
+
+
+
+
+<!--
+	Marcadores FECHAR e DROPDOWN
+	
+	x ▼
+	
+	.close
+	.caret
+	
+	[.../c3/estilizacao-de-marcadores.html]
+-->
+
+<button type="button" class="close" aria-label="Close">
+	<span aria-hidden="true">x</span>
+</button>
+<span class="caret"></span>
+
+
+
+<!--
+	Flutuar
+	
+	.pull-left
+	.pull-right
+	
+	[.../c3/estilizacao-com-float.html]
+-->
+<p class="pull-left">Parágrafo à esquerda</p>
+<p class="pull-right">Parágrafo à direita</p>
+
+<!--
+	Clearfix
+	
+	Para limpar floats use a classe 
+	clearfix no container dos elementos flutuados
+	
+	.clearfix
+	
+	[.../c3/estilizacao-com-clearfix.html]
+-->
+<div class="col-md-12 clearfix">
+	<p class="pull-left">Parágrafo à esquerda</p>
+	<p class="pull-right">Parágrafo à direita</p>
+</div>
+
+
+<!--
+	Centrar na horizontal
+	
+	.center-block
+	
+	[.../c3/estilizacao-para-centrar.html]
+-->
+<p class="center-block" style="width:50%">
+	Lorem ipsum...
+</div>
+
+
+<!--
+	Mostrar e esconder
+	
+	Para revelar e esconder conteúdos, inclusive para leitores de tela
+	
+	.show
+	.hidden
+	
+	Exceto para leitores de tela
+	
+	.sr-only
+	.sr-only-focusable 		// deve ser usada junto a .sr-only
+	
+	
+-->
+<p class="hidden">Conteúdo oculto até para leitores de tela</p>
+<p class="show">Visivel para todos</p>
+
+<a href="#conteudo-principal" class="sr-only sr-only-focusable">
+	Ir para o conteúdo principal
+</a>
+
+<!--
+	Image replacement
+	
+	Esconder um texto dentro de um elemento e substituí-lo por imagem.
+	
+	.text-hide
+-->
+<span class="text-hide">logo marca LG</span>
+
+
+<!--
+	Mostrar e esconder por breakpoints
+	
+	O Bootstrap prevê uma série de classes para controlar a visibilidade de conteúdos
+	de acordo com o breakpoint. É possível mostrar conteúdos em larguras de
+	viewport acima de determinada largura e escondê-los abaixo daquela largura e
+	vice-versa.
+	
+	.visible-xs-*
+	.visible-sm-*
+	.visible-md-*
+	.visible-lg-*
+	
+	.visible-md-block
+	.visible-md-inline
+	.visible-md-inline-block
+	
+	.hidden-xs
+	.hidden-sm
+	.hidden-md
+	.hidden-lg
+	
+	[.../c3/estilizacao-mostra-esconde-por-breakpoints.html]
+-->
+<span class="hidden-xs">Esconde em x-small</span>
+<span class="visible-xs-block">Visivel em x-small</span>
+...
+<span class="hidden-sm">Esconde em small</span>
+<span class="visible-sm-block">Visível em small</span>
+...
+<span class="hidden-md">Esconde em medium</span>
+<span class="visible-md-block">Visível em medium</span>
+...
+<span class="hidden-lg">Esconde em large</span>
+<span class="visible-lg-block">Visível em large</span>
+
+
+<!--
+	Classes para impressão
+	
+	+-----------------------------+-----------+-----------+
+	| Classes                     | Navegador | Impressão |
+	+-----------------------------+-----------+-----------+
+	| .visible-print-block 		  |	ESCONDE   | MOSTRA    |	
+	| .visible-print-inline 	  |	ESCONDE   | MOSTRA    |
+	| .visible-print-inline-block | ESCONDE   | MOSTRA    |
+	| .hidden-print 			  | MOSTRA    | ESCONDE   |
+	+-----------------------------+-----------+-----------+
+-->
+
+
+
+<!-- # VALIDAÇÃO DE FORMULÁRIOS -->
+
+<!--
+	Em campos não validados inclua a declaração
+	aria-invalid="true"
+	
+	.has-warning
+	.has-error
+	.has-success
+	
+	tais classes são para: controler, rotolo do controler ou .help-block
+	
+	[.../c3/estilizacao-estado-de-validacao.html]
+-->
+<div class="form-group has-success">
+	<label class="control-label" for="sucesso">Input com sucesso</label>
+	<input type="text" class="form-control" id="sucesso">
+</div>
+<div class="checkbox has-success">
+	<label>
+		<input type="checkbox" id="checkboxSucesso" value="opcao1">
+		Checkbox com sucesso
+	</label>
+</div>
+
+
+<!-- 
+	Validando com icones 
+	
+	icone dentro e a direita do campo
+	
+	.has-feedback
+	.form-control-feedback
+	
+	.glyphicon 
+	.glyphicon-ok
+	.glyphicon-warning-sign
+	.glyphicon-remove
+	
+	<span class="glyphicon glyphicon-ok form-control-feedback"></span>
+	
+	[.../c3/estilizacao-icones-de-validacao.html]
+-->
+<div class="form-group has-success has-feedback">
+	<label class="control-label" for="sucesso">Input com sucesso</label>
+	<input type="text" class="form-control" id="sucesso">
+	<span class="glyphicon glyphicon-ok form-control-feedback" aria-hidden="true"></span>
+</div>
+<div class="form-group has-warning has-feedback">
+	<label class="control-label" for="alerta">Input com alerta</label>
+	<input type="text" class="form-control" id="alerta">
+	<span class="glyphicon glyphicon-warning-sign form-control-feedback" aria-hidden="true"></span>
+</div>
+<div class="form-group has-error has-feedback">
+	<label class="control-label" for="erro">Input com erro</label>
+	<input type="text" class="form-control" id="erro">
+	<span class="glyphicon glyphicon-remove form-control-feedback" aria-hidden="true"></span>
+</div>
+
+
+
+<!-- # 4 COMPONENTES -->
+
+
+
+<!-- 
+	Icons 
+	
+	conjunto de mais de 260 ícones denominado 
+	Glyphicon Halflings (http://glyphicons.com/)
+	Icon font é tratado como uma fonte
+	
+	Em geral usa-se		*elem deve estar vazio
+	div  : icones block
+	span : icones inline-block
+	
+	.glyphicon
+	.glyphicon-*
+	
+	http://getbootstrap.com/components/#glyphicons
+	[.../c4/icones.html]
+-->
+<span class="glyphicon glyphicon-heart"></span>
+<h1>Amor <span class="glyphicon glyphicon-heart text-danger"></span></h1>
+
+
+<!--
+	Dropdown e dropup
+	
+	É necessário
+	jQuery, e plugin do Bootstrap para dropdown (bootstrap.min.js)
+	
+	.dropdown
+	.dropup
+	
+	data-toggle="dropdown"  : qlqr elem para ser o btn
+	.dropdown-menu			: elem ul com a lista
+	
+	
+	[.../c4/dropdown-dropup.html]
+-->
+<div class="dropdown">
+	
+	<button class="btn btn-primary dropdown-toggle" type="button" id="dropDown1" data-toggle="dropdown" aria-expanded="false">
+		Frutas <span class="caret"></span>
+	</button>
+	
+	<ul class="dropdown-menu" role="menu" aria-labelledby="dropDown1">
+		<li role="presentation"><a role="menu-item" href="#" tabindex="-1">Abacaxi</a></li>
+		<li role="presentation"><a role="menu-item" href="#" tabindex="-1">Laranja</a></li>
+		<li role="presentation"><a role="menu-item" href="#" tabindex="-1">Maçã</a></li>
+		<li class="divider"></li>
+		<li role="presentation"><a role="menu-item" href="#" tabindex="-1">Outras...</a></li>
+	</ul>
+</div>
+
+<!-- dropup -->
+<div class="dropup">
+	
+	<button class="btn btn-primary dropdown-toggle" type="button" id="dropUp1" data-toggle="dropdown" aria-expanded="false">Frutas <span class="caret"></span></button>
+	
+	<ul class="dropdown-menu" role="menu" aria-labelledby="dropUp1">
+		<li role="presentation"><a role="menu-item" href="#" tabindex="-1">Abacaxi</a></li>
+		<li role="presentation"><a role="menu-item" href="#" tabindex="-1">Laranja</a></li>
+		<li role="presentation"><a role="menu-item" href="#" tabindex="-1">Maçã</a></li>
+		<li class="divider"></li>
+		<li role="presentation"><a role="menu-item" href="#" tabindex="-1">Outras...</a></li>
+	</ul>
+</div>
+
+
+<!--
+	Alinhamento, título e item desabilitado
+	
+	.dropdown-menu-right	: no container dos itens
+|							  gera um alinhamento a direita
+	.dropdow-header			: para inserir um titulo
+	.disabled				: desabilita um item
+	
+	[.../c4/dropdown-alinhamento-titulo-item-desabilitado.html]
+-->
+<div class="dropup">
+	
+	<button class="btn btn-primary dropdown-toggle" type="button" id="dropUp1" data-toggle="dropdown" aria-expanded="false">Frutas <span class="caret"></span></button>
+	
+	<ul class="dropdown-menu dropdown-menu-right" role="menu" aria-labelledby="dropUp1">
+		<li role="presentation" class="dropdown-header">Frutas específicas</li>
+		<li role="presentation"><a role="menu-item" href="#" tabindex="-1">Abacaxi</a></li>
+		<li role="presentation" class="disabled"><a role="menu-item" href="#" tabindex="-1">Laranja</a></li>
+		<li role="presentation"><a role="menu-item" href="#" tabindex="-1">Maçã</a></li>
+		<li class="divider"></li>
+		<li role="presentation"><a role="menu-item" href="#" tabindex="-1">Outras...</a></li>
+	</ul>
+</div>
+
+
+<!--
+	Agrupamento de botões
+	
+	.btn-group
+	.btn-group-vertical
+	.btn-toolbar
+-->
+	
+	
+<!--
+	Agrupamento em linha
+	
+	.btn-group
+	
+	[.../c4/agrupamento-de-botoes.html]
+-->
+<div class="btn-group" role="group">
+	<button type="button" class="btn btn-primary">Novo</button>
+	<button type="button" class="btn btn-primary">Abrir</button>
+	<button type="button" class="btn btn-primary">Fechar</button>
+	<button type="button" class="btn btn-primary">Salvar</button>
+</div>
+	
+
+<!--
+	Agrupamento vertical
+	
+	.btn-group-vertical
+	
+	[.../c4/agrupamento-de-botoes.html]
+-->
+<div class="btn-group-vertical" role="group">
+	<button type="button" class="btn btn-primary">Novo</button>
+	<button type="button" class="btn btn-primary">Abrir</button>
+	<button type="button" class="btn btn-primary">Fechar</button>
+	<button type="button" class="btn btn-primary">Salvar</button>
+</div>
+
+
+<!--
+	Agrupamento barra de ferramentas
+	
+	.btn-toolbar
+	
+	[.../c4/agrupamento-de-botoes.html]
+-->
+<div class="btn-toolbar" role="toolbar">
+	<button type="button" class="btn btn-primary">Novo</button>
+	<button type="button" class="btn btn-primary">Abrir</button>
+	<button type="button" class="btn btn-primary">Fechar</button>
+	<button type="button" class="btn btn-primary">Salvar</button>
+</div>
+	
+<!--
+	Agrupamento justificado
+	
+	.btn-group
+	.btn-group-justified
+	
+	[.../c4/agrupamento-de-botoes.html]
+-->
+<div class="btn-group btn-group-justified" role="group">
+	<div class="btn-group" role="group">
+		<button type="button" class="btn btn-primary">Novo</button>
+	</div>
+	<div class="btn-group" role="group">
+		<button type="button" class="btn btn-primary">Abrir</button>
+	</div>
+	<div class="btn-group" role="group">
+	<button type="button" class="btn btn-primary">Fechar</button>
+	</div>
+	<div class="btn-group" role="group">
+	<button type="button" class="btn btn-primary">Salvar</button>
+	</div>
+</div>
+	
+	
+<!--
+	Dimensionamento
+	
+	.btn-group-lg
+	.btn-group-sm
+	.btn-group-xs
+	
+	[.../c4/agrupamento-de-botoes.html]
+-->
+<div class="btn-group btn-group-lg" role="group" aria-label="Large button group">
+	<button type="button" class="btn btn-success">novo</button>
+	<button type="button" class="btn btn-success">abrir</button>
+	<button type="button" class="btn btn-success">fechar</button>
+	<button type="button" class="btn btn-success">salvar</button>
+</div>
+
+
+<!-- 
+	Botões dropdown simples
+	
+	.btn-group
+	
+	[.../c4/botoes-dropdown.html]
+-->
+<div class="btn-group">
+	<button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+		EDITAR (btn-primary) <span class="caret"></span>
+	</button>
+	<ul class="dropdown-menu" role="menu">
+		<li><a href="#">novo</a></li>
+		<li><a href="#">abrir</a></li>
+		<li><a href="#">fechar</a></li>
+		<li class="divider"></li>
+		<li><a href="#">salvar</a></li>
+	</ul>
+</div>
+
+
+<!-- 
+	Botões com ícone de abertura separado
+	
+	[.../c4/botoes-dropdown.html]
+-->
+<div class="btn-group">
+	<button type="button" class="btn btn-primary">EDITAR (btn-primary)</button>         
+	<button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+		<span class="caret"></span>
+	</button>
+	<ul class="dropdown-menu" role="menu">
+		<li><a href="#">novo</a></li>
+		<li><a href="#">abrir</a></li>
+		<li><a href="#">fechar</a></li>
+		<li class="divider"></li>
+		<li><a href="#">salvar</a></li>
+	</ul>
+</div>
+
+<!--
+	Botões com ícone de abertura Glyphicon e integrado
+	
+	[.../c4/botoes-dropdown.html]
+-->
+<div class="btn-group">
+	<button type="button" class="btn btn-primary">FAVORITOS</button>         
+	<button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+		<span class="glyphicon glyphicon-star"></span>				
+	</button>
+	<ul class="dropdown-menu" role="menu">
+		<li><a href="#">um</a></li>
+		<li><a href="#">dois</a></li>
+		<li><a href="#">três</a></li>
+		<li class="divider"></li>
+		<li><a href="#">quatro</a></li>
+	</ul>
+</div>
+
+<!-- OBS.: Para fazer uso de "dropup" com btn-group -->
+<div class="btn-group dropup">
+	<!-- marcação típica como mostrada nos exemplos anteriores -->
+</div>
+
+
+<!--
+	CONTROLE DE INPUTS COM ADD-ON
+	
+	O Bootstrap prevê funcionalidades que permitem inserir
+	texto de ajuda (ou complementar) e botões, antes, depois 
+	ou mesmo em ambas as extremidades (antes e depois) dos 
+	controles (campos) de formulário input para entrada de 
+	textos.
+-->
+
+<!--
+	Texto add-on
+
+	.input-group
+	.input-group-addon
+	
+	[.../c4/input-com-add-on.html]
+-->
+
+<h2>Texto add-on ANTES</h2>
+<div class="input-group">
+	<span class="input-group-addon" id="addon1">@</span>
+	<input type="text" class="form-control" placeholder="Twitter" aria-describedby="addon1">
+</div>
+
+<h2>Texto add-on DEPOIS</h2>
+<div class="input-group">
+	<input type="text" class="form-control" placeholder="Seu email" aria-describedby="addon2">
+	<span class="input-group-addon" id="addon2">@gmail.com</span>
+</div>
+
+<h2>Texto add-on ANTES e DEPOIS</h2>
+<div class="input-group">
+	<span class="input-group-addon">R$</span>
+	<input type="text" class="form-control" placeholder="Total da sua compra" aria-label="Valor em reais">
+	<span class="input-group-addon">,00</span>
+</div>
+
+<!--
+	Botão simples add-on
+	
+	.input-group-btn
+	
+	[.../c4/input-com-add-on.html]
+-->
+
+<h2>Botão simples add-on antes</h2>
+<div class="input-group">
+	<span class="input-group-btn">
+		<button class="btn btn-default" type="button">IR</button>
+	</span>
+	<input type="text" class="form-control" placeholder="CPF">
+</div>
+
+<h2>Botão simples add-on depois</h2>
+<div class="input-group">
+	<input type="text" class="form-control" placeholder="Palavra-chave">
+	<span class="input-group-btn">
+		<button class="btn btn-default" type="button">BUSCAR</button>
+	</span>
+</div>
+
+<!--
+	Botão dropdown add-on
+	
+	.input-group-btn
+	
+	[.../c4/input-com-add-on.html]
+-->
+
+
+<h2>Botão dropdown add-on ANTES</h2>
+<div class="input-group">
+	<div class="input-group-btn">
+		<button type="button" class="btn btn-default">CONTATOS</button>         
+		<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+			<span class="glyphicon glyphicon-envelope"></span>
+		</button>
+		<ul class="dropdown-menu" role="menu">
+			<li><a href="#">um</a></li>
+			<li><a href="#">dois</a></li>
+			<li><a href="#">três</a></li>
+			<li class="divider"></li>
+			<li><a href="#">quatro</a></li>
+		</ul>
+	</div>
+	<input type="text" class="form-control" placeholder="Contatos">
+</div>
+
+<h2>Botão dropdown add-on DEPOIS</h2>
+<div class="input-group">
+	<input type="text" class="form-control" placeholder="Favoritos">
+	<div class="input-group-btn">
+		<button type="button" class="btn btn-default">FAVORITOS</button>         
+		<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="true">
+			<span class="glyphicon glyphicon-star"></span>
+		</button>
+		<ul class="dropdown-menu" role="menu">
+			<li><a href="#">um</a></li>
+			<li><a href="#">dois</a></li>
+			<li><a href="#">três</a></li>
+			<li class="divider"></li>
+			<li><a href="#">quatro</a></li>
+		</ul>
+	</div>
+</div>
+
+
+<!-- # NAVEGAÇÃO -->
+
+
+<!--
+	Aba básica
+
+	.nav
+	.nav-tabs
+	
+	[.../c4/navegacao.html]
+-->
+<ul class="nav nav-tabs">
+	<li role="presentation" class="active"><a href="#">Home</a></li>  
+	<li role="presentation"><a href="#">Portfólio</a></li>  
+	<li role="presentation"><a href="#">Artigos</a></li>
+	<li role="presentation"><a href="#">Contato</a></li>
+</ul>
+
+<!--
+	Aba desabilitada
+	
+	.disabled
+	
+	[.../c4/navegacao.html]
+-->
+<ul class="nav nav-tabs">
+	<li role="presentation" class="active"><a href="#">Home</a></li>  
+	<li role="presentation"><a href="#">Portfólio</a></li>  
+	<li role="presentation" class="disabled"><a href="#">Artigos</a></li>
+	<li role="presentation"><a href="#">Contato</a></li>
+</ul>
+
+<!--
+	Aba com link Dropdown
+	
+	.dropdown
+	
+	[.../c4/navegacao.html]
+-->
+<li role="presentation" class="dropdown">
+	<a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-expanded="false">
+		Artigos <span class="caret"></span>
+	</a>
+	<ul class="dropdown-menu" role="menu">
+		<li><a href="#">HTML</a></li>
+		<li><a href="#">CSS</a></li>
+		<li><a href="#">JavaScript</a></li>
+	</ul>
+</li>
+
+<!--
+	Aba justificadas
+	
+	.nav-justified
+	
+	[.../c4/navegacao.html]
+-->
+<ul class="nav nav-tabs nav-justified">
+	<li role="presentation" class="active"><a href="#">Home</a></li>  
+	<li role="presentation"><a href="#">Portfólio</a></li>  
+	<li role="presentation"><a href="#">Artigos</a></li>
+	<li role="presentation"><a href="#">Contato</a></li>
+</ul>
+
+
+<!--
+	Pills [desabilitado | justificado | dropdown]
+
+	.nav
+	.nav-pills
+	.nav-justified
+	.disabled
+	
+	[.../c4/navegacao.html]
+-->
+<ul class="nav nav-pills nav-justified">
+	<li role="presentation" class="active"><a href="#">Home</a></li>  
+	<li role="presentation"><a href="#">Portfólio</a></li>
+	<!-- dropdown -->
+	<li role="presentation" class="dropdown">
+		<a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-expanded="false">
+			Artigos <span class="caret"></span>
+		</a>
+		<ul class="dropdown-menu" role="menu">
+			<li><a href="#">HTML</a></li>
+			<li><a href="#">CSS</a></li>
+			<li><a href="#">JavaScript</a></li>
+		</ul>
+	</li>
+	<!-- desabilitado --> 
+	<li role="presentation" class="disabled"><a href="#">Contato</a></li>
+</ul>
+
+
+<!-- # BARRA DE NAVEGAÇÃO -->
+
+<!--
+	.nav 
+	.navbar
+	.navbar-default
+	
+	.navbar-header
+	.navbar-toggle
+	.navbar-brand
+	.navbar-collapse
+	.navbar-nav
+	.collapsed
+	.icon-bar
+	data-toggle="collapse"
+	
+	
+	[.../c4/barra-de-navegacao.html]
+-->
+<nav class="navbar navbar-default">
+	<div class="container-fluid">
+		
+		<!-- menu mobile tipo hambúrguer -->
+		<div class="navbar-header">
+			<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#barraBasica">
+				<span class="sr-only">Toggle navigation</span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			</button>
+			<a class="navbar-brand" href="#">
+				Site
+				<!-- ou -->
+				<img src="logo.jpg" alt="logotipo do site">
+			</a>
+		</div>
+
+		<div class="collapse navbar-collapse" id="barraBasica">
+			<ul class="nav navbar-nav">
+				<li class="active"><a href="#">Home <span class="sr-only">(current)</span></a></li>
+				<li><a href="#">Portfólio</a></li>
+				<li><a href="#">Matérias</a></li>
+				<li><a href="#">Contato</a></li>
+			</ul>
+		</div><!-- /.navbar-collapse -->
+	</div><!-- /.container-fluid -->
+</nav>
+
+<!--
+	Inversão de Cores
+	
+	barra preta com texto branco
+	
+	.navbar-inverse
+	
+	[.../c4/barra-de-navegacao.html]
+-->
+<nav class="navbar navbar-inverse">
+	....
+
+<!-- 
+	Barra Fixa 
+	
+	A altura padrão de uma barra de navegação é de 50px.
+	Deve se definir padding no <body> para não sobrepor
+	
+	.navbar-fixed-top
+	.navbar-fixed-bottom
+	
+	[.../c4/barra-de-navegacao-fixa.html]
+-->
+<nav class="navbar navbar-default navbar-fixed-top">
+	....
+
+	
+<!--
+	Barra de navegação com caixa de busca
+	
+	.navbar-form
+	.navbar-left
+	.navbar-right
+	
+	[.../c4/barra-navegacao-com-complementos.html]
+-->
+<nav class="navbar navbar-default">
+	<div class="navbar-header">
+		<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#barraComBusca">
+			<span class="sr-only">Toggle navigation</span>
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>
+		</button>
+		<a class="navbar-brand" href="#">Site</a>
+	</div>
+
+	<div class="collapse navbar-collapse" id="barraComBusca">
+		<!-- campo de busca -->
+		<form class="navbar-form navbar-right" role="search">
+			<div class="form-group">
+				<input type="text" class="form-control" placeholder="Busca">
+			</div>
+			<button type="submit" class="btn btn-default">OK</button>
+		</form>            
+		<ul class="nav navbar-nav">
+			<li class="active"><a href="#">Home <span class="sr-only">(current)</span></a></li>
+			<li><a href="#">Portfólio</a></li>
+			<li><a href="#">Matérias</a></li>
+			<li><a href="#">Contato</a></li>
+		</ul>
+	</div><!-- /.navbar-collapse -->
+</nav>
+
+
+<!--
+	Barra de navegação com botão
+	
+	.navbar-btn
+	.pull-left
+	.pull-right
+	
+	[.../c4/barra-navegacao-com-complementos.html]
+-->
+....
+<div class="collapse navbar-collapse" id="barraComBotao">
+	<ul class="nav navbar-nav">
+		....
+	</ul>
+	<button type="button" class="btn btn-default navbar-btn pull-right">Login</button>
+</div>
+
+<!--
+	Barra de navegação com link dropdown
+	
+	.dropdown
+	
+	[.../c4/barra-navegacao-com-complementos.html]
+-->
+....
+<ul class="nav navbar-nav">
+	<li class="active"><a href="#">Home <span class="sr-only">(current)</span></a></li>
+	<li><a href="#">Portfólio</a></li>
+	<li class="dropdown">
+		<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Artigos <span class="caret"></span></a>
+		<ul class="dropdown-menu" role="menu">
+			<li><a href="#">HTML</a></li>
+			<li><a href="#">CSS</a></li>
+			<li><a href="#">JavaScript</a></li>
+		</ul>
+	</li>          
+	<li><a href="#">Contato</a></li>
+</ul>
+
+<!--
+	Barra de navegação com texto
+	
+	.navbar-text
+	.pull-left
+	.pull-right
+	
+	[.../c4/barra-navegacao-com-complementos.html]
+-->
+....
+<div class="collapse navbar-collapse" id="barraComBotao">
+	<ul class="nav navbar-nav">
+		....
+	</ul>
+	<p class="navbar-text pull-right">Site criado pelo <a href="http://maujor.com">Maujor</a></p>
+</div>
+
+
+<!-- # CAMINHO DE NAVEGAÇÃO ( breadcrumb ) 
+
+	.breadcrumb
+
+	[.../c4/breadcrumb-paginacao-label-badge.html]
+-->
+<ol class="breadcrumb">
+	<li><a href="#">Serviços</a></li>
+	<li><a href="#">Aplicações</a></li>
+	<li class="active">Aplicações web</li>
+</ol>
+
+
+<!-- # PAGINAÇÃO -->
+
+<!--
+	Widget de paginação básica
+	
+	por padrão é posicionado a esquerda para alterar
+	esse comportamento use .text-center | .pull-right
+	
+	.pagination
+	
+	[.../c4/breadcrumb -paginacao-label-badge.html]
+-->
+<nav>
+	<ul class="pagination">
+		<li>
+			<a href="#" aria-label="Anterior">
+				<span aria-hidden="true">«</span>
+			</a>
+		</li>
+		<li><a href="#">1</a></li>
+		<li><a href="#">2</a></li>
+		<li><a href="#">3</a></li>
+		<li><a href="#">4</a></li>
+		<li><a href="#">5</a></li>
+		<li>
+			<a href="#" aria-label="Próximo">
+				<span aria-hidden="true">»</span>
+			</a>
+		</li>
+	</ul>
+</nav>
+
+<!--
+	Dimensionamento do widget paginação
+	
+	.pagination-xs
+	.pagination-sm
+	.pagination-lg
+	
+	[.../c4/breadcrumb -paginacao-label-badge.html]
+-->
+
+<ul class="pagination pagination-lg"> <!-- tamanho maior -->
+	....
+
+<!--
+	Estado dos links
+	
+	.active
+	.disabled
+	
+	[.../c4/breadcrumb -paginacao-label-badge.html]
+-->
+<ul class="pagination">
+	<li class="disabled">
+		<a href="#" aria-label="Anterior">
+			<span aria-hidden="true">&#171;</span>
+		</a>
+	</li>
+	....
+	<li class="active"><a href="#">3</a></li>
+</ul>
+
+
+<!-- 
+	PAGER 
+
+	.pager
+	.previus
+	.next
+	.disabled 	// desabilita
+-->
+<ul class="pager">
+	<li><a href="#">Anterior</a></li>
+	<li><a href="#">Próxima</a></li>
+</ul>
+<!-- Other example extremos do container -->
+<nav>
+	<ul class="pager">
+		<li class="previous"><a href="#">Anterior</a></li>
+		<li class="next"><a href="#">Próxima</a></li>
+	</ul>
+</nav>
+
+
+<!--
+	RÓTULOS E MARCADORES 
+	
+	.label
+	.label-default
+	.label-primary
+	.label-success
+	.label-info
+	.label-warning
+	.label-danger
+	
+-->
+<h2>Rótulos</h2>
+<span class="label label-default">Default</span>
+<span class="label label-primary">Primary</span>
+<span class="label label-success">Success</span>
+<span class="label label-info">Info</span>
+<span class="label label-warning">Warning</span>
+<span class="label label-danger">Danger</span>		
+
+<!-- Marcadores -->
+<h2>Marcadores</h2>
+<h1>Artigos <span class="badge">42</span></h1>
+<h6>Menssagens <span class="badge">358</span></h6>
+
+
+
+<!-- # JUMBOTROM -->
+
+<div class="jumbotron">
+	<h1>Jumbotron básico</h1>
+	<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Morbi eleifend, purus quis laoreet faucibus, ante augue malesuada mi, id rhoncus augue lorem eget elit.</p>
+	<p><a class="btn btn-primary btn-lg" href="#" role="button">Saiba mais...</a></p>
+</div>
+
+<!--
+	Jumbrotom estendido
+	
+	deve estar fora do .container
+	
+	.jumbotron
+	
+	[.../c4/jumbotron.html]
+-->
+<div class="jumbotron">
+	<div class="container">
+		<h1>Jumbotron básico</h1>
+		<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Morbi eleifend, purus quis laoreet faucibus, ante augue malesuada mi, id rhoncus augue lorem eget elit.</p>
+		<p><a class="btn btn-primary btn-lg" href="#" role="button">Saiba mais...</a></p>
+	</div>
+</div>
+
+
+<!--
+	Page Header
+	
+	para ser definida em um elemento container para um título. 
+	O efeito desta classe é o de estilizar o título com 
+	uma borda inferior e margens.
+	
+	.page-header
+	
+	[.../c4/jumbotron.html]
+-->
+<div class="page-header">
+	<h1>Título em container <code>page-header</code> <small> com texto menor</small></h1>
+</div>
+
+
+<!-- # THUMBNAILS miniaturas 
+
+	.thumbnail
+	
+	[.../c4/thumbnail.html]
+-->
+
+<a href="t1.jpg" class="thumbnail">
+	<img src="t1.jpg" alt="carro1">
+</a>
+
+<!-- 
+	Thumbnail com conteúdo
+	
+	.thumbnail
+	.caption
+	
+	[.../c4/thumbnail.html]
+-->
+<div class="thumbnail">
+	<img src="t1.jpg" alt="carro1">
+	<div class="caption text-left">
+		<h3>Descrição da imagem</h3>
+		<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Morbi eleifend, purus quis laoreet faucibus, ante augue malesuada.</p>         
+		<p><a class="btn btn-primary" href="#" role="button">Saiba mais...</a></p>
+	</div>       
+</div>
+
+
+<!-- # CAIXAS DE ALERTA
+
+	.alert
+	.alert-dismissible 		: botao x
+	.alert-link				: para links na mensagem
+	data-dismiss="alert"	: importante para o funcionamento
+	
+	.alert-info
+	.alert-success
+	.alert-danger
+	.alert-warning
+
+	[.../c4/caixa-de-alerta.html]
+-->
+<div class="alert alert-success alert-dismissible" role="alert">
+	<button type="button" class="close" data-dismiss="alert" aria-label="Close">
+		<span aria-hidden="true">×</span>
+	</button>
+	<p><strong>Atenção!</strong> Este é o texto de uma <a href="#" class="alert-link">mensagem de alerta.</a></p>
+</div>
+
+
+<!-- # Barras de Progresso
+	
+	.progress
+	.progress-bar
+	
+	.progress-bar-striped
+	.active
+	
+	.progress-bar-info
+	.progress-bar-success
+	.progress-bar-warning
+	.progress-bar-danger
+	
+	[.../c4/barra-de-progresso.html]
+-->
+
+<!-- padrão -->
+<div class="progress">
+	<div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%;">
+		<span class="sr-only">60% Complete</span> 			   
+	</div>
+</div>
+
+<!-- em outra cor -->
+<div class="progress">
+	<div class="progress-bar progress-bar-success" ....>
+	....
+
+<!-- animação -->
+<div class="progress">
+  	<div class="progress-bar progress-bar-danger progress-bar-striped active" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" style="width: 50%;">
+	....	
+
+<!-- rótulo -->
+<div class="progress">
+	<div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%;">
+		60% 			   
+	</div>
+</div>
+
+<!-- multiplas -->
+<div class="progress">
+	<div class="progress-bar progress-bar-danger progress-bar-striped" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 40%;">
+		<span class="sr-only">40% Complete</span> 			   
+	</div>
+	<div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="35" aria-valuemin="0" aria-valuemax="100" style="width: 35%;">
+		<span class="sr-only">35% Complete</span> 			   
+	</div>
+	<div class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100" style="width: 10%;">
+		<span class="sr-only">10% Complete</span> 			   
+	</div>
+</div>
+
+
+<!-- # Objetos de mídia
+	
+	.media
+	.media-left
+	.media-object
+	.media-body
+	.media-heading
+	
+	[.../c4/objetos-de-midia-1.html]
+-->
+<div class="media"> <!-- mídia à esquerda -->
+	<div class="media-left">
+		<a href="#">
+			<img class="media-object" src="64x64.gif" alt="">
+		</a>
+	</div>
+	<div class="media-body">
+		<h4 class="media-heading">Exemplo de mídia alinhada à esquerda</h4>
+		<p>Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis.</p>
+	</div>
+</div>
+
+<!-- alinhado verticalmente ao meio -->
+<div class="media"> <!-- alinhamento vertical no meio -->
+	<div class="media-left media-middle" href="#">
+		<img class="media-object" src="64x64.gif" alt="">
+	</div>
+	<div class="media-body">
+		<h4 class="media-heading">Exemplo de mídia alinhada verticalmente no meio</h4>
+		<p>Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis.</p>
+	</div>
+</div>
+
+
+<!-- # Agrupamento de itens de listas
+
+	.list-group
+	.list-group-item
+
+	.list-group-item-info
+	.list-group-item-success
+	.list-group-item-warning
+	.list-group-item-danger
+	
+	
+	[.../c4/agrupamento-de-itens-de-lista.html].
+-->
+<h4>Agrupamento básico</h4>
+<ul class="list-group">
+	<li class="list-group-item">Abacate</li>
+	<li class="list-group-item">Carambola</li>
+	<li class="list-group-item">Figo</li>
+	<li class="list-group-item">Uva</li>
+</ul>
+
+<h4>Itens com "badge" (marcadores)</h4>
+<ul class="list-group">
+	<li class="list-group-item"> <span class="badge">14</span> Abacate</li>
+	<li class="list-group-item"> <span class="badge">fora de época</span> Carambola</li>
+	<li class="list-group-item"> <span class="badge">345</span> Figo</li>
+	<li class="list-group-item"> <span class="badge">em falta</span>Uva</li>
+</ul>
+
+<h4>Agrupamento de links</h4>
+<div class="list-group">
+	<a class="list-group-item active" href="#">Site do Maujor</a>
+	<a class="list-group-item" href="#">Wikipedia português</a>
+	<a class="list-group-item disabled" href="#">Site do W3C</a>
+	<a class="list-group-item" href="#">Google</a>
+</div>
+
+<h4>Agrupamento de botões</h4>
+<div class="list-group">
+	<button type="button" class="list-group-item">Arquivo</button>
+	<button type="button" class="list-group-item">Inserir</button>
+	<button type="button" class="list-group-item">Copiar</button>
+	<button type="button" class="list-group-item">Enviar</button>
+</div>
+
+<h4>Classes contextuais</h4>
+<ul class="list-group">
+	<li class="list-group-item list-group-item-success">Arquivo enviado!</li>
+	<li class="list-group-item list-group-item-info">Use o formato JPG</li>
+	<li class="list-group-item list-group-item-warning">Está faltando um arquivo</li>
+	<li class="list-group-item list-group-item-danger">Poderá conter virus</li>
+</ul>
+
+<h4>Lista com conteúdo personalizado</h4>
+<div class="list-group">
+	<a href="#" class="list-group-item active">
+		<h4 class="list-group-item-heading">A função calc() das CSS</h4>
+		<p class="list-group-item-text">A função calc() das CSS permite que se definam valores CSS com uso de expressões matemáticas, ou seja, o valor adotado para a propriedade é o resultado de uma expressão matemática.</p>
+	</a>
+</div>
+
+<div class="list-group">
+	<a href="#" class="list-group-item">
+		<h4 class="list-group-item-heading">Especificações do W3C para construção de layouts</h4>
+		<p class="list-group-item-text">Nessa matéria você irá conhecer o andamento das especificações do W3C para construção de layouts</p>
+	</a>
+</div>
+
+<div class="list-group">
+	<a href="#" class="list-group-item">
+		<h4 class="list-group-item-heading">A propriedade CSS will-change</h4>
+		<p class="list-group-item-text">Se você já percebeu aquele efeito flash, em navegadores com engine WebKit, ao renderizar certas funcionalidades CSS, especialmente transformações e animações então é muito provável que você já tenha ouvido falar do termo "hardware acceleration.</p>
+	</a>
+</div>
+<div class="list-group">
+	<a href="#" class="list-group-item">
+		<h4 class="list-group-item-heading">A propriedade CSS3 Background</h4>
+		<p class="list-group-item-text">Tutorial atualizado: A propriedade CSS background define as características do fundo dos elementos HTML, tais como cor e imagens de fundo, definindo ainda, para as imagens, seu posicionamento e repetição.</p>
+	</a>
+</div>
+
+
+<!-- # Panel
+
+	.panel
+	.panel-body
+	.panel-heading
+	.panel-title
+	.panel-footer
+	
+	.panel-default
+	.panel-primary
+	.panel-success
+	.panel-info
+	.panel-warning
+	.panel-danger
+	
+	[.../c4/painel.html]
+-->
+<h2>Painel básico</h2>
+<div class="panel panel-default">
+	<div class="panel-body">
+		<p>Conteúdo textual do painel básico - Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Morbi eleifend, purus quis laoreet faucibus, ante augue malesuada mi, id rhoncus augue lorem eget elit.</p>
+	</div>
+</div>
+
+<h2>Painel com título</h2>
+<div class="panel panel-default">
+	<div class="panel-heading">
+		<h3 class="panel-title">Título do texto do painel</h3>
+	</div>
+	<div class="panel-body">
+		<p>Conteúdo textual do painel básico - Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Morbi eleifend, purus quis laoreet faucibus, ante augue malesuada mi, id rhoncus augue lorem eget elit.</p>
+	</div>
+</div>
+
+
+<h2>Painel com rodapé</h2>
+<div class="panel panel-default">
+	<div class="panel-body">
+		<p>Conteúdo textual do painel básico - Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Morbi eleifend, purus quis laoreet faucibus, ante augue malesuada mi, id rhoncus augue lorem eget elit.</p>
+	</div>
+	<div class="panel-footer">Rodapé do painel</div>
+</div>
+
+<h2>Painel com cores contextuais</h2>
+<div class="panel panel-primary">
+	<div class="panel-heading">
+		<h3 class="panel-title">Título do texto do painel</h3>
+	</div>
+	<div class="panel-body">
+		<p><code>&lt;div class="panel panel-primary"&gt;...&lt;/div&gt;</code></p>
+	</div>
+</div>
+
+<h2>Painel com texto e tabela</h2>
+<div class="panel panel-default">
+	<div class="panel-heading">
+		<h3 class="panel-title">Título do painel com tabela</h3>
+	</div>	
+	<div class="panel-body">
+		<p>Conteúdo textual do painel com uma tabela - Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Morbi eleifend, purus quis laoreet faucibus, ante augue malesuada mi, id rhoncus augue lorem eget elit.</p>
+	</div>
+	<table class="table">
+		....
+	</table>    
+</div>
+
+<h2>Painel sem texto e tabela</h2>
+<div class="panel panel-default">
+	<div class="panel-heading">
+		<h3 class="panel-title">Título do painel com tabela</h3>
+	</div>	
+	<table class="table">
+		....
+	</table>    
+</div>
+
+<h2>Painel com texto agrupamento de itens</h2>
+<div class="panel panel-default">
+	<div class="panel-heading">
+		<h3 class="panel-title">Título do painel com agrupamento de itens</h3>
+	</div>	
+	<div class="panel-body">
+		<p>Conteúdo textual do painel com um agrupamento de itens - Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Morbi eleifend, purus quis laoreet faucibus.</p>
+	</div>
+	<ul class="list-group">
+		<li class="list-group-item">Abacate</li>
+		<li class="list-group-item">Carambola</li>
+		<li class="list-group-item">Figo</li>
+		<li class="list-group-item">Uva</li>
+	</ul>
+</div>
+
+<h2>Painel sem texto agrupamento de itens</h2>
+<div class="panel panel-default">
+	<div class="panel-heading">
+		<h3 class="panel-title">Título do painel com agrupamento de itens</h3>
+	</div>	
+	<ul class="list-group">
+		....
+	</ul>
+</div>
+
+
+<!-- # Mídias responsivas
+
+
+
+-->
+<div class="embed-responsive embed-responsive-4by3">    
+	<figure class="embed-responsive-item">
+		<video poster="cover.jpg" controls="">
+			<source src="plymouth.ogg" type="video/ogg">
+			<source src="plymouth.mp4" type="video/mp4">
+			<source src="plymouth.webm" type="video/webm">
+			<p>Lamento! Seu navegador não suporta o elemento video da HTML5.<br> 
+			Assista o video localmente <br> <a href="plymouth.mp4">fazendo o download</a></p>
+		</video>
+	</figure>
+</div>
+
+<!-- video do youtube -->
+<div class="embed-responsive embed-responsive-16by9">    
+	<figure class="embed-responsive-item">
+		<iframe src="https://www.youtube.com/embed/90R6NNXEIsE" allowfullscreen></iframe>    
+	</figure>
+</div>
+<!-- mapa do google -->
+<h4 class="text-center">Mapa do Google razão de aspecto 4:3</h4>
+<div class="embed-responsive embed-responsive-4by3">    
+	<figure class="embed-responsive-item">
+		<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3658.642939750699!2d-46.6250567!3d-23.5093671!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce588253412eed%3A0x92a4242ae43234f1!2sAv.+Cruzeiro+do+Sul%2C+2463+-+Santana%2C+S%C3%A3o+Paulo+-+SP!5e0!3m2!1spt-BR!2sbr!4v1436653823238" allowfullscreen></iframe>    
+	</figure>
+</div>
+
+
+<!-- # WELLS
+	
+	.well
+	.well-sm
+	.well-lg
+	
+	[.../c4/wells.html]
+-->
+<div class="col-md-8 col-md-offset-2">
+	<h4 class="text-center">Well altura reduzida</h4>
+	<p class="well well-sm">Pellentesque sapien. Sed purus sapien, eleifend ac, volutpat ac, molestie eget, massa. Nam a nibh. Nulla facilisi.</p>
+
+	<h4 class="text-center">Well padrão</h4>
+	<p class="well">Pellentesque sapien. Sed purus sapien, eleifend ac, volutpat ac, molestie eget, massa. Nam a nibh. Nulla facilisi.</p>
+
+	<h4 class="text-center">Well altura aumentada</h4>
+	<p class="well well-lg">Pellentesque sapien. Sed purus sapien, eleifend ac, volutpat ac, molestie eget, massa. Nam a nibh. Nulla facilisi.</p>
+</div>
+
+
+<!-- # PLUGINS -->
+
+
+<!--
+
+	Os plugins fazem uso da utilização do atributo
+	data-*
+	Exemplo dropdown : data-toggle="dropdown"
+-->
+<div class="dropdown">
+	<button class="btn btn-primary dropdown-toggle" type="button" id="dropDown1" data-toggle="dropdown" aria-expanded="true">
+		Frutas <span class="caret"></span>
+	</button>
+<!-- 
+	para funcionar sem o data-toogle="dropdown" 
+	podemos fazer assim
+-->
+<script type="text/javascript">
+	$('.dropdown-toggle').dropdown();
+	
+	$('body').off('data-api'); // desabilita para todos os plugins
+	$('body').off('dropdown.data-api'); // desabilita o plugin dropdown
+</script>
+
+
+<!--
+	Transições
+	
+	usado em conjunto com outros pluginscujas funcionalidades
+	admitem uso de transição tal como obtenção de efeitos 
+	slide e fade em janelas modais, abas, caixas de alerta
+	e painéis. As transições disponíveis nesse plugin são 
+	slide e fade.
+	
+	slide | fade
+	
+-->
+
+
+<!--
+	Modal
+
+	data-toggle="modal"
+	
+	.modal
+	.modal-dialog
+	.modal-content
+	.modal-header
+	.modal-body
+	.modal-footer
+	
+	.modal-sm
+	.modal-lg
+	
+	[.../c5/modal-data-toggle.html]
+-->
+<button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#modalLogin">
+	Abrir modal normal
+</button>
+
+<div class="modal fade" id="modalLogin" tabindex="-1" role="dialog" aria-labelledby="modalLoginLabel">
+	<div class="modal-dialog" role="document">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+				<h4 class="modal-title">Área administrativa</h4>
+			</div>
+			<div class="modal-body">
+				<form action="" method="post">
+					<label for="nome">Nome de usuário:</label>
+					<input type="text" id="nome" name="nome">
+					<label for="senha">Senha:</label>
+					<input type="password" id="senha" name="senha">
+					<button type="button" class="btn  btn-primary">Login</button>
+					<label class="checkbox"><input type="checkbox" name="lb">Lembrar meus dados</label>
+					<a href="#">Perdeu a senha?</a>
+				</form>
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-default" data-dismiss="modal">Fechar</button>
+			</div> <!-- /.modal-footer -->
+		</div> <!-- /.modal-content -->
+	</div> <!-- /.modal-dialog -->    
+</div> <!-- /.modal -->
+
+
+<!-- Modal menor -->
+<div class="modal-dialog" role="document">
+	<div class="modal-content modal-sm">
+	...
+
+
+<!--
+	Dropdown
+	
+	Dropdown é uma funcionalidade que permite ao autor criar um efeito de abertura e fechamento de submenus. Podemos inserir dropdown nos componentes barras de navegação, abas e pills estudados no capítulo 4.
+	
+	data-toggle="dropdown"
+	
+	[.../c5/dropdown-data-toggle.html]
+-->
+<nav class="navbar navbar-default">
+	<div class="navbar-header">
+		<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#barraDataToggle">
+			<span class="sr-only">Toggle navigation</span>
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>
+		</button>
+		<a class="navbar-brand" href="#">Automóveis</a>
+	</div>
+
+	<div class="collapse navbar-collapse" id="barraDataToggle">
+		<ul class="nav navbar-nav">
+			<li class="active"><a href="#">Home <span class="sr-only">(current)</span></a></li>
+			<li><a href="#">Ford</a></li>
+			<li class="dropdown">
+				<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Renault<span class="caret"></span></a>
+				<ul class="dropdown-menu" role="menu">
+					<li><a href="#">Clio</a></li>
+					<li><a href="#">Logan</a></li>
+					<li><a href="#">Sandero</a></li>
+					<li class="divider"></li>
+					<li><a href="#">Outros</a></li>
+				</ul>
+			</li>
+			....
+		</ul>
+	</div>
+</nav>	
+
+
+
+<!--
+	Scrollspy
+	
+	Scrollspy é uma funcionalidade que permite ao autor monitorar
+	automaticamente a posição da barra de rolagem da página quando
+	se tem navegação interna (in-page), ou seja, navegação na 
+	própria página.
+	
+	[.../c5/scrollspy-body-data-spy.html]
+-->
+<body data-spy="scroll" data-target="#barraNavegacao">
+....
+<nav class="navbar navbar-default navbar-fixed-top" id="barraNavegacao">
+	<div class="container-fluid">
+		<div class="navbar-header">
+			<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#barraFixaTop">
+				<span class="sr-only">Toggle navigation</span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			</button>
+			<a class="navbar-brand" href="#">Site</a>
+		</div>
+
+		<div class="collapse navbar-collapse" id="barraFixaTop">
+			<ul class="nav navbar-nav">
+				<li class="active"><a href="#home">Home<span class="sr-only">(current)</span></a></li>
+				<li><a href="#portfolio">Portfólio</a></li>
+				<li><a href="#materias">Matérias</a></li>
+				<li><a href="#contato">Contato</a></li>
+			</ul>
+		</div><!-- /.navbar-collapse -->
+	</div><!-- /.container-fluid -->
+</nav>
+<div id="portfolio">
+<h2>Portfólio</h2>
+	....
+</div>    
+
+<div id="materias">
+<h2>Matérias</h2>
+	....
+</div>    
+
+<div id="contato">
+<h2>Contato</h2>
+....
+</div>    
+
+
+<!--
+	Abas
+
+	Abas é uma funcionalidade que permite ao autor criar um 
+	mecanismo de navegação baseado em abas, ou seja, quando
+	o usuário clica em um link contido em uma aba (ou em pill) 
+	o conteúdo alvo do link é apresentado em uma área 
+	fixa na página.
+	
+	data-toggle="tab"
+	
+	[.../c5/aba-data-toggle.html]
+	
+-->
+<ul class="nav nav-tabs" role="tablist">
+	<li role="presentation" class="active"><a href="#home" aria-controls="home" role="tab" data-toggle="tab" aria-expanded="true">Home</a></li>
+	<li role="presentation" class=""><a href="#portfolio" aria-controls="portfolio" role="tab" data-toggle="tab" aria-expanded="false">Portfólio</a></li>
+	<li role="presentation" class=""><a href="#artigos" aria-controls="artigos" role="tab" data-toggle="tab" aria-expanded="false">Artigos</a></li>
+	<li role="presentation" class=""><a href="#contato" aria-controls="contato" role="tab" data-toggle="tab" aria-expanded="false">Contato</a></li>
+</ul>
+
+<!-- Abas -->
+<div class="tab-content">
+	<div role="tabpanel" class="tab-pane fade active in" id="home">
+		<h2>Home</h2>
+		....
+	</div>
+
+	<div role="tabpanel" class="tab-pane fade" id="portfolio">
+		<h2>Portfólio</h2>
+		....
+	</div>
+
+	<div role="tabpanel" class="tab-pane fade" id="artigos">
+		<h2>Artigos</h2>
+		....
+	</div>
+	<div role="tabpanel" class="tab-pane fade" id="contato">
+		<h2>Contato</h2>
+		...
+	</div>
+</div> <!-- /.tab-content -->
+
+
+<!--
+	Tooltip
+
+	No jargão do desenvolvimento web a palavra inglesa tooltip
+	foi traduzida para o português como dica de contexto É 
+	aquela nossa conhecida funcionalidade que permite abrir uma
+	pequena janela popup, quando o usuário passa o mouse sobre
+	uma palavra, contendo um texto explicativo, ou uma dica 
+	sobre a palavra.
+	
+	data-toggle="tooltip"
+	
+	É possível alterar a posição da caixa com uso do atributo 
+	data-placement e seus valores: top, right, bottom e left,
+	sendo top o valor padrão.
+
+	data-placement="bottom"
+	
+	[.../c5/tooltip-alinhamento.html]
+	[.../c5/tooltip-javascript.html]
+	
+	precisa ser invocado pelo desenvolvedor
+-->
+<script type="text/javascript">
+	// necessário para funcionar
+	$('[data-toggle="tooltip"]').tooltip();
+	
+	// ainda são previstas as opções:
+	$('seletor').tooltip( "show" ) // Mostra o tooltip
+	$('seletor').tooltip( "hide" ) // Esconde o tooltip
+	$('seletor').tooltip( "toggle" ) // Alterna mostra/esconde o tooltip
+	$('seletor').tooltip( "destroy") // Esconde e destrói o tooltip
+</script>
+
+<p>As frutas de <a href="#" data-toggle="tooltip" title="" data-original-title="Média acima de 10ºC, nos meses mais quentes e entre -3ºC e 18ºC, nos meses frios">clima temperado</a> são quase todas produzidas em árvores ou arbustos lenhosos ou <a href="#" data-toggle="tooltip" data-placement="right" title="" data-original-title="Plantas trepadeiras lenhosas">lianas</a>. Contudo elas não se desenvolvem adequadamente nas regiões tropicais (de clima quente), precipitação atmosférica regular e temperatura média anual superior a 22<sup>o.</sup>C. Isto, porque existe a necessidade fisiológica de alguns dias de baixas temperaturas (chilling requirement), cerca de 5 a 15<sup>o.</sup>C, em cada ano anterior à floração.</p>
+
+<!-- tooltip javascript -->
+<p class="dois">
+	A <i data-original-title="" title=""><a>maçã</a></i> é uma das principais frutas do clima temperado.
+</p>
+<script>
+$('.dois i').tooltip( {
+	html: true,
+	title: '<img src="maca.jpg">',
+	placement: 'top'
+})
+</script>
+
+
+
+<!--
+	Popover
+
+	Popover é uma funcionalidade semelhante ao tooltip. Destina-se a fornecer informação adicional sobre uma determina palavra de um texto. Enquanto o tooltip é indicado para apresentar uma pequena dica informativa o popover destina-se a fornecer uma explicação mais detalhada.
+
+	data-toggle="popover"
+	
+	attr title		: titulo da informação
+	data-content	: conteúdo
+	
+	data-placement="bottom"	: posição top | bottom | right | left
+	
+	<script type="text/javascript">
+		// talvéz necessário para iniciar
+		$('[data-toggle="popover"]).popover();
+		
+		// algumas opções
+		$('seletor').popover( "show" )   // Mostra o popover
+		$('seletor').popover( "hide" )   // Esconde o popover
+		$('seletor').popover( "toggle" ) // Alterna mostra/esconde o popover
+		$('seletor').popover( "destroy") // Esconde e destrói o popover
+	</script>
+		
+	[.../c5/popover-data-toggle.html]
+-->
+<h4>Popover à direita</h4>
+<p>A <a href="#" data-toggle="popover" data-placement="right" title="" data-content="O consumo regular de maçã é excelente para se prevenir e manter a taxa de colesterol em níveis aceitáveis, com a ingestão recomendada de uma unidade por dia. Esse efeito é devido ao alto teor de pectina, encontrada na casca." data-original-title="Informações nutricionais">maçã</a> é uma das principais frutas do clima temperado.</p>		
+
+<h2 class="text-left">Popover em botões</h2>
+<button type="button" class="btn btn-primary" data-toggle="popover" data-placement="left" title="" data-content="Popover em botão é muito legal" data-original-title="Alinhamento à esquerda">Mostrar popover</button>
+
+
+
+<!--
+	Alerta
+	
+	Dentro desse div marca-se um elemento button do tipo button com a classe close,
+	o par atributo/valor igual a data-dismiss="alert" e a seguir a marcação do título e
+	conteúdo da mensagem.
+	
+	.close
+	data-dismiss="alert"
+	
+	
+	O método nativo para inicializar um alerta tem a sintaxe conforme mostrada a seguir.
+	
+	$('seletor').alert()
+	$('seletor').alert("close") // fecha a caixa de alerta
+-->
+
+<!--
+	Botões
+	
+	$(.botaoN).button('toggle')	// alterna o estado do botão – ativo/repouso
+	$(.botaoN).button('reset')	// retorna o botão ao estado repouso
+	$(.botaoN).button('string') // altera o texto do botão
+	
+	[.../c5/botoes-javascript.html]
+-->
+<script>
+$("#botaoToggle").click(function(){
+	$(this).button('toggle');
+});
+</script>
+
+
+<!--
+	Collapse
+	
+	Collapse é uma funcionalidade destinada a criar o efeito revelar/esconder para
+	apresentação de conteúdos.
+	
+	Existem duas maneiras de se projetar este efeito: diretamente com uso do par
+	atributo/valor data-toggle="collapse" ou codificando com uso de métodos JavaScript
+	previstos no Boostrap. Veremos a seguir essas duas maneiras.
+	
+	Se for usado o elemento a, seu atributo href deverá ter valor igual ao valor do id
+	do container dos conteúdos a revelar/esconder.
+	Se for usado o elemento button ele deverá receber o atributo data-target com valor
+	igual ao valor do id do container dos conteúdos a revelar/esconder.
+	
+	data-toggle="collapse"
+	
+	Alerta: O funcionamento do componente collapse requer a inclusão do plugins
+|			collapse e transition.
+	
+	[.../c5/collapse-data-toggle.html]
+-->
+
+<a data-toggle="collapse"  href="#colapseUm">Maçã (link)</a>
+<button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#colapseUm" aria-expanded="false">
+	Maçã (botão)
+</button>
+<div id="colapseUm" class="collapse">		
+	<div class="well">
+		<p>
+			<img src="collapse-maca.jpg" alt="maçã" class="pull-left" />
+			A maçã é o fruto pomáceo da macieira, árvore da família Rosaceae. É um dos frutos de árvore mais cultivados, e o mais conhecido dos muitos membros do género Malus que são usados pelos seres humanos. As maçãs crescem em pequenas árvores, de folha caducifólia que florescem na Primavera e produzem fruto no Outono. A árvore é originária da Ásia Ocidental, onde o seu ancestral selvagem, Malus sieversii, ainda é encontrado atualmente. As maçãs têm sido cultivadas há milhares de anos na Ásia e Europa, tendo sido trazidas para a América do Norte pelos colonizadores europeus. As maçãs têm estado presentes na mitologia e religiões de muitas culturas, incluindo as tradições nórdica, grega e cristã. Em 2010, o genoma da fruta foi descodificado, levando a uma nova compreensão no controle de doenças e na reprodução seletiva durante a produção da maçã.
+		</p>	
+		<small>Fonte: Wikipedia</small>	
+	</div>
+</div> 
+
+<h2 class="text-center">Collapse com data-toggle (efeito acordeão)</h2>
+<div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+	<div class="panel panel-default">
+		<div class="panel-heading" role="tab" id="headingLaranja">
+			<h4 class="panel-title">
+				<a class="btn btn-info" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseLaranja" aria-expanded="true" aria-controls="collapseLaranja">
+					Laranja
+				</a>
+			</h4>
+		</div>
+		<div id="collapseLaranja" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingLaranja">
+			<div class="panel-body">
+			<p><img src="collapse-laranja.jpg" alt="laranja" class="pull-left">A laranja é o fruto produzido pela laranjeira (Citrus × sinensis), uma árvore da família Rutaceae. A laranja é um fruto híbrido, criado na antiguidade a partir do cruzamento da cimboa com a tangerina. O sabor da laranja varia do doce ao levemente ácido. Frequentemente, esta fruta é descascada e comida ao natural, ou espremida para obter sumo. As pevides (pequenos caroços duros) são habitualmente removidas, embora possam ser usadas em algumas receitas. A casca exterior pode ser usada também em diversos pratos culinários, como ornamento, ou mesmo para dar algum sabor. A camada branca entre a casca e as gomas, de dimensão variável, raramente é utilizada, apesar de ter um sabor levemente doce. É recomendada para "quebrar" o sabor ácido da laranja na boca, após terminar de consumir o fruto.</p>
+			<small>Fonte: Wikipedia</small>
+			</div>
+		</div>
+	</div>
+	<div class="panel panel-default">
+		<div class="panel-heading" role="tab" id="headingMamao">
+			<h4 class="panel-title">
+				<a class="btn btn-info" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseMamao" aria-expanded="false" aria-controls="collapseMamao">
+					Mamão
+				</a>
+			</h4>
+		</div>
+		<div id="collapseMamao" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingmamao">
+			<div class="panel-body">
+				<p><img src="collapse-mamao.jpg" alt="mamão" class="pull-left">Mamão, papaia ou ababaia é o fruto do mamoeiro ou papaeira, árvores das espécies do gênero Carica, especialmente de Carica papaya. Em Angola utilizam-se os termos mamão / mamoeiro para identificar o fruto mais arredondado, identificando papaia / papaeira com o fruto mais alongado e mais adocicado. São bagas ovaladas, com casca macia e amarela ou esverdeada. A sua polpa é de uma cor laranja forte, doce e macia. Há uma cavidade central preenchida com sementes negras e rugosas, envolvidas por um arilo transparente.</p>
+
+				<p>Mamões são consumidos in natura, em saladas e sucos. Antes da maturação, sua casca apresenta um látex leitoso que deve ser retirado antes do consumo. Este látex contém substâncias nocivas às mucosas, sendo usado, inclusive, culinariamente, como amaciante de carnes. Tem um alto teor de papaína, uma enzima proteolítica, que é usada em medicamentos para tratamento de distúrbios gastrointestinais e para reabsorção de hematomas.</p>
+
+				<p>Originalmente do sul do México e países vizinhos, é atualmente cultivada na maioria dos países tropicais e nos Estados Unidos, onde foi introduzido primeiramente na Flórida, Havaí, Porto Rico, e nas Ilhas Virgens.</p>                      
+				<small>Fonte: Wikipedia</small>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+<!--
+	Carousel
+	
+	Carousel é uma funcionalidade que se destina a criar um slideshow acionado
+	com uso de um efeito semelhante a um carrossel.
+	
+	[.../c5/carrossel-data-ride.html]
+	[.../c5/carrossel-javascript.html]
+-->
+<div id="meuCarrossel" class="carousel slide" data-ride="carousel">
+	
+	<!-- Indicadores -->
+	<ol class="carousel-indicators">
+		<li data-target="#meuCarrossel" data-slide-to="0" class="active"></li>
+		<li data-target="#meuCarrossel" data-slide-to="1"></li>
+	</ol>
+	
+	<!-- Container dos slides -->
+	<div class="carousel-inner" role="listbox">
+		<div class="item active">
+			<img src="c1.jpg" alt=" ">
+			<div class="carousel-caption">
+				<h3>Slide 1 &#8212; Normandia França</h3>  
+				<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</p>
+			</div>
+		</div>
+		<div class="item">
+			<img src="c2.jpg" alt="">
+			<div class="carousel-caption">
+				<h3>Slide 2 &#8212; Normandia França</h3>  
+				<p>Morbi eleifend, purus quis laoreet faucibus.</p>
+			</div>
+		</div>
+	</div> <!-- /.carousel-inner -->
+	
+	<!-- Controles -->
+	<a class="left carousel-control" href="#meuCarrossel" role="button" data-slide="prev">
+		<span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+		<span class="sr-only">Anterior</span>
+	</a>
+	<a class="right carousel-control" href="#meuCarrossel" role="button" data-slide="next">
+		<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+		<span class="sr-only">Próximo</span>
+	</a>
+</div> <!-- /#meuCarrossel -->
+
+
+<!--
+	Affix
+	
+	Affix é uma funcionalidade destinada a manter um container fixo em uma posição
+	na página, ou seja, se o usuário aciona a barra de rolagem da página o container
+	não se movimenta.
+	
+	data-offset-top que define a quantidade de pixels a rolar a partir da qual o container será mantido fixo na sua posição original.
+	
+	[.../c5/affix-data-spy.html]
+	[.../c5/affix-javascript.html]
+-->
+<ul class="nav nav-tabs nav-stacked" data-spy="affix" data-offset-top="265">
+	<li><a href="#tp">Topo</a></li>
+	<li><a href="#um">Link 1</a></li>
+	<li><a href="#dois">Link 2</a></li>
+	<li><a href="#tres">Link 3</a></li>
+	<li><a href="#quatro">Link 4</a></li>
+	<li><a href="#cinco">Link 5</a></li>
+</ul>
+<h2 id="um">Link 1</h2>
+<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Morbi eleifend, purus quis laoreet faucibus, ante augue malesuada mi, id rhoncus augue lorem eget elit. Ut sollicitudin sodales purus. Phasellus libero felis, blandit nec, commodo ut, imperdiet ut, nibh. Suspendisse potenti. Donec ullamcorper cursus dolor. Duis vitae ipsum. Maecenas dapibus hendrerit diam. Morbi varius, massa id pretium accumsan, nunc lorem congue libero, ut euismod metus libero id nulla. Duis posuere odio sed velit vulputate venenatis. Suspendisse et dui ac metus auctor fringilla. Curabitur interdum augue a pede.</p>
+
+<p>Curabitur hendrerit erat ut augue. Cras gravida. Mauris consequat aliquam leo. Aenean non tortor id metus aliquet consectetuer. Quisque sodales lectus ac orci. Donec eleifend fringilla mi. Vivamus vel massa. Aenean interdum pellentesque sem. Nulla pellentesque felis et tortor. Duis cursus, dui non dictum tincidunt, wisi ipsum mollis wisi, nec ornare velit ipsum eget enim. In sed felis. Phasellus condimentum sodales nulla. Etiam orci leo, rutrum malesuada, congue vel, fringilla vitae, lorem. Pellentesque ligula.</p>
+<h2 id="dois">Link 2</h2>
+<p>Pellentesque sapien. Sed purus sapien, eleifend ac, volutpat ac, molestie eget, massa. Nam a nibh. Nulla facilisi. Mauris ac metus. Donec porttitor, turpis et sollicitudin vehicula, nunc dui dignissim arcu, euismod hendrerit arcu est quis elit. In quam tellus, auctor in, dignissim at, euismod gravida, lacus. Nullam dui. Donec sit amet eros varius lacus laoreet vestibulum. Phasellus vestibulum vehicula velit. Vestibulum malesuada lectus eu urna.</p>
+
+<p>Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nullam in eros. Aliquam mattis est et arcu. Duis scelerisque tempus diam. Morbi accumsan, dui sed auctor tincidunt, orci wisi imperdiet lacus, ut tincidunt arcu wisi vitae erat. Curabitur a lacus. Suspendisse odio nulla, elementum vitae, laoreet ac, rhoncus ut, lectus. Phasellus a tellus eleifend odio pellentesque condimentum. Etiam hendrerit metus ut mi. Quisque purus lorem, dictum dapibus, lacinia in, consequat non, diam. Nulla vulputate urna ac ligula. Mauris consectetuer lorem at dui. Phasellus semper risus sed ipsum varius laoreet. Ut tempus nisl eget risus. Nam felis.</p>
+<h2 id="tres">Link 3</h2>
+....
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

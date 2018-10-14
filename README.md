@@ -1,0 +1,1 @@
+Arquivos documentativos para tais linguagens. Serve como revisão para consulta de sintaxe e técnicas aplicadas em programação
