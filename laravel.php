@@ -1194,7 +1194,7 @@ ___	Dados de Rotas
 // http://myapp.com/users/15
 // 2 segmentos user e 15
 $request->segments() // retorna todos segmentos
-$request->segment(1) // retorna um "user" indece base 1
+$request->segment(1) // retorna um "user" indice base 1
 
 
 	A partir de parâmetro de rota
@@ -1528,7 +1528,7 @@ DB::table('contacts')
 DB::table('contacts')->skip(30)->take(10)->get()
 
  latest(column) | oldests(column)
-// classificam pela coluna passda (ou por created_at se nenhuma
+// classificam pela coluna passada (ou por created_at se nenhuma
 // for passada) crescente latest() decrescente oldest()
 
  inRandomOrder()
