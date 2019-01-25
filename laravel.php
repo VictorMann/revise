@@ -314,7 +314,7 @@ use App\Http\Requests;
 class MyController extends Controller {}
 
 
-// Gerando controladores de recusos
+// Gerando controladores de recursos
 // métodos pré-definidos
 // index, create, destroy, edit, update, show, store
 php artisan make:controller MyController --resource
@@ -1492,7 +1492,7 @@ DB::table('contacts')
 // colunas NULL
 
  whereRaw()
-// consulta bruta não escapada (warning Inject of SQL!)
+// consulta bruta não escapada (warnning Inject of SQL!)
 DB::table('contacts')->wherRaw('id = 12345')->get()
 
  wherExists()
@@ -2671,7 +2671,7 @@ Route::get('people/{people}/edit', function () {
 // Simplificando a autorização de controlador com authorize()
 // Disto:
 public function show ($contactId) {
-	$contact = Contact::findOrFail($contactID)
+	$contact = Contact::findOrFail($contactId)
 	if (Gate::cannot('update-contact', $contact)) abort(403)
 }
 // Para isto:
@@ -2953,7 +2953,7 @@ class BanDeleteMethod {
 		// cima na pilha
 		$response = $next($request)
 		// Neste ponto, podemos interagir novamente com a resposta
-		// imediatamente antes de aela ser retornada para o usuário
+		// imediatamente antes de ela ser retornada para o usuário
 		$response->cookie('visited-our-site', true)
 		// Por fim, podemos liberar essa resposta para o usuário
 		return $response

@@ -1240,9 +1240,8 @@ a.sort();					// [Bug, Dog, ant, cat] considera maiusculas e minusculas
 a.sort(function(s,t) {		// [ant, Bug, cat, Dog] sem considerar
 	a = s.toLowerCase();
 	b = t.toLowerCase();
-	if (a < b) return -1;
-	if (a > b) return 1;
-	return 0;
+	if (a == b) return 0;
+	return a > b ? 1 : -1;
 });
 
 
@@ -1308,68 +1307,43 @@ a.shift();			// [[4,5],1]	retorna 3
 
 var data = [1,2,3,4];
 sum = 0;
-data.forEach(function(v) {		//=> sum = 10
-	sum += v;
-});
-
-data.forEach(function(v,i,a) {	//=> [2,3,4,5]
-	a[i] = v + i;
-});
-
+data.forEach(v => sum += v); //=> sum = 10
+data.forEach((v, i, a) => a[i] = v + i); //=> [2,3,4,5]
 
 
 // map() --> passa cada elemento do array para a função e retorna os valores
 
 a = [1,2,3];
-var b = a.map(function(v) {		//=> b = [1,4,9]
-	return v * v;
-});
+var b = a.map(v => v * v); //=> b = [1,4,9]
 
 
 // filter() --> retorna um subconjunto dos arrays utilizando um predicado
 a = [1,2,3,4,5];
-var b = a.filter(function(v) {	//=> b = [1,2]
-	return v < 3;
-});
-var b = a.filter(function(v,i){ //=> b = [1,3,5]
-	return i%2 == 0;
-});
+var b = a.filter(v => v < 3); //=> b = [1,2]
+var b = a.filter((v, i) => i%2 == 0); //=> b = [1,3,5]
 
 
 
 // every() --> retorna true se todos elementos forem true ao predicado
 a = [1,2,3,4,5];
-a.every(function(v) {			// true
-	return v < 10;
-});
+a.every(v => v < 10); // true
 
 
 // some() --> retorna true se apenas um elemento corresponder ao predicado
 a = [1,2,3,4,5];
-a.some(function(v) {			// true 
-	return v%2 == 0;
-});
-
-
+a.some(v => v%2 == 0); // true 
 
 
 //reduce(func, inicia) --> combina os valoes para produz um valor unico
 a = [1,2,3,4];
-a.reduce(function(x,y) {	// 0 (opcional) inicializada no x caso não seja definido utiliza
-	return x + y;			// os elementos 1 e 2 do array
-}, 0);	
-a.reduce(function(x,y) {	// retorna o maior valor
-	return (x>y)?x:y;
-});
+a.reduce((x,y) => x + y, 0);	
+a.reduce((x,y) => (x > y) ? x : y); 	// retorna o maior valor
 
 
 // reduceRight() --> atua igual ao reduce(), só que do maior índece para o menor
-
 // Exp.: 2^(3^4)
 var a = [2,3,4];
-a.reduceRight(function(elevado,valor) {
-	return Math.pow(valor, elevado);
-}); 
+a.reduceRight((elevado,valor) => Math.pow(valor, elevado)); 
 
 
 
@@ -1422,10 +1396,10 @@ Array.prototype.map.call(a, function(v) {	//=> ["A","B","C"]
 
 s = "JavaScript";
 
-Array.prototype.join.call(s, " ");				//=> "J a v a S c r i p t"
-Array.prototype.filter.call(s, function(v) {	//=> "JvScrpt": filtra os caracteres da string
-	return v.match(/[^aeiou]/);					// corresponde apenas as não vogais
-}).join("");
+Array.prototype.join.call(s, " ");		//=> "J a v a S c r i p t"
+Array.prototype.filter.call(s, v =>		//=> "JvScrpt": filtra os caracteres da string
+	v.match(/[^aeiou]/)					// corresponde apenas as não vogais
+).join("");
 
 
 
