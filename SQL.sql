@@ -189,7 +189,7 @@ para logar no MySQL:
 
 -- fazer uso de um database
 mysql -u root -p
-use bank
+USE bank
 
 -- para logar e usar um database sem comando use
 mysql -u root -p bank; 
@@ -201,8 +201,10 @@ CREATE DATABASE bank;
 GRANT ALL PRIVILEGES ON bank.* TO 'NomeUsuario'@'localhost' IDENTIFIED BY 'senha';
 
 -- Alterar a senha do usuário
-SET PASSWORD FOR root@localhost = PASSSWORD('nova senha');
-ALTER USER root@localhost IDENTIFIED BY 'secret';
+SET PASSWORD FOR `root`@`localhost` = PASSSWORD('123');				-- OPC 1
+ALTER USER `root`@`localhost` IDENTIFIED BY '123';					-- OPC 2
+UPDATE `mysql`.`user` SET authentication_string = PASSWORD('123') 	-- OPC 3
+WHERE USER = 'root' AND HOST = 'localhost';
 FLUSH PRIVILEGES;
 
 -- para sair do mysql

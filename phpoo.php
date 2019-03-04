@@ -1050,7 +1050,7 @@ $base->appendChild( $dom->createElement('user', 'mary') 		);
 
 // manipulação de Arquivos
 
-$file = SplFileInfo('file.txt');
+$file = new SplFileInfo('file.txt');
 echo $file->getFileName();	//> 'file.txt'
 echo $file->getExtension();	//> 'txt'
 echo $file->getSize();		//> '415'
@@ -1680,7 +1680,7 @@ class VendaMapper {
 		$sql = "INSERT INTO venda (data_venda) VALUES ('{$data}')";
 		print "{$sql}<br>\n";
 		self::$conn->exec($sql);
-		$id = self::getLastId();
+		$id = self::$conn->lastInsertId(); 
 		
 		foreach ($venda->getItens() as $item) {
 			$quantidade = $item[0];
