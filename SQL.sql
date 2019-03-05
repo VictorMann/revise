@@ -197,6 +197,21 @@ mysql -u root -p bank;
 -- cria um database
 CREATE DATABASE bank;
 
+-- ** IMPORATAR DATABASE
+mysql -h host -u root -p < arquivo.sql
+mysql -h host -u root -p banco < arquivo.sql
+source arquivo.sql
+
+-- ** EXPORTAR DATABASE
+mysqldump -h HOST -uroot -p -B --add-drop-database banco > db.sql
+-- [-B] CREATE DATABASE `banco` IF NOT EXISTS; USE `banco`
+-- [--add-drop-database] DROP DATBASE `banco`;
+
+
+-- Renomear banco
+RENAME TABLE `banco_old`.`users` TO `banco_new`.`users`;
+DROP DATABASE `banco_old`;
+
 -- cria um usuario com todos os privilégios
 GRANT ALL PRIVILEGES ON bank.* TO 'NomeUsuario'@'localhost' IDENTIFIED BY 'senha';
 
