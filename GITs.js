@@ -169,7 +169,7 @@ git rebase --skip
 git rebase --abort
 
 // apos tratar os arquivos com os devidos conflitos
-git add -A // indexa os arquivos alterados
+git add .	// indexa os arquivos alterados
 git rebase --continue
 
 // para isso vamos ate o branch alternativo
@@ -232,7 +232,7 @@ git checkout index.html
 /***
 	Guardando alterações para mais tarde: git stash
 	
-	
+	25004, 25597
 	Em seguida, ele começa a modificar o arquivo para resolver uma outra tarefa. 
 	Contudo, ele descobre que o seu commit anterior apresentava um bug e deseja 
 	resolvê-lo antes de terminar a sua tarefa. Mas as suas alterações que estão no 
@@ -344,3 +344,13 @@ git checkout index.html
 	> git cherry-pick 19f0bb7d8b4be8ecd687b48fca301b71b95eab41
 	> git cherry-pick A..B // pego o intervalo de commits
 */
+
+/**
+	Restaura todo o estado de commits local com o remoto
+**/
+git fetch --all
+git reset --hard origin/master
+
+
+
+
