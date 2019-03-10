@@ -330,6 +330,15 @@ CREATE TABLE employee2 SELECT * FROM employee;
 ALTER TABLE person
 MODIFY person_id SMALLINT UNSIGNED AUTO_INCREMENT;
 
+-- Removendo Colunas
+ALTER TABLE <tabela> DROP COLUMN <coluna>;
+
+-- Multiplas açoes
+ALTER TABLE <tabela>
+    DROP COLUMN <coluna1>,
+    ADD COLUMN <coluna2> <tipo_do_campo>,
+    DROP COLUMN <coluna3>;
+
 -- Apagando uma Tabela
 DROP [TEMPORARY] TABLE [IF NOT EXISTS] tbl_name [, tbl_name, ...]
 

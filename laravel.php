@@ -2067,7 +2067,7 @@ $sum = $collection
 	
 
 // um metodo especial so do Eloquent
-modelKey() // retorna as chaves primarias das instancias da coleção
+modelKeys() // retorna as chaves primarias das instancias da coleção
 
 // Classes Collection Personalizadas para Modelos do Eloquent
 class OrderCollection extends Collection {
