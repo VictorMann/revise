@@ -3346,6 +3346,80 @@ ON UPDATE CASCADE
 ON DELETE CASCADE;
 
 
+-- Difine uma sub-query como uma coluna no resultado
+-- os dados são separados por virgula
+SELECT u.id, (SELECT GROUP_CONCAT(t.id) FROM telefones AS t)
+FROM users AS u;
+
+--
+-- IS
+--
+SELECT 1 IS TRUE, 0 IS FALSE, NULL IS UNKNOWN;
+--> 1, 1, 1
+
+--
+-- IS NOT
+--
+SELECT 1 IS NOT UNKNOWN, 0 IS NOT UNKNOWN, NULL IS NOT UNKNOWN;
+--> 1, 1, 0
+
+--
+-- IS NULL
+--
+SELECT 1 IS NULL, 0 IS NULL, NULL IS NULL;
+--> 0, 0, 1
+
+--
+-- BETWEEN
+--
+SELECT 2 BETWEEN 1 AND 3, 2 BETWEEN 3 and 1;
+--> 1, 0
+SELECT 'b' BETWEEN 'a' AND 'c';
+--> 1
+
+--
+-- COALESCE
+--
+SELECT COALESCE(NULL,1);
+--> 1
+SELECT COALESCE(NULL,NULL,NULL);
+--> NULL
+
+--
+-- GREATEST
+--
+SELECT GREATEST(2,0);
+--> 2
+> SELECT GREATEST(34.0,3.0,5.0,767.0);
+--> 767.0
+SELECT GREATEST('B','A','C');
+--> 'C'
+
+--
+-- IN
+--
+SELECT 2 IN (0,3,5,7);
+--> 0
+SELECT 'wefwf' IN ('wee','wefwf','weg');
+--> 1
+
+--
+-- ISNULL
+--
+SELECT ISNULL(1+1);
+--> 0
+SELECT ISNULL(1/0);
+--> 1
+
+--
+-- LEAST
+--
+SELECT LEAST(2,0);
+--> 0
+SELECT LEAST(34.0, 3.0, 5.0, 767.0);
+--> 3.0
+SELECT LEAST('B','A','C');
+--> 'A'
 
 
 

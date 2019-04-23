@@ -351,6 +351,15 @@ git checkout index.html
 git fetch --all
 git reset --hard origin/master
 
+/**
+	Mescla commits em um só
+	você precisa estar no branch sem ser o master
+**/
+git rebase -i master
+
+
+
+
 
 
 

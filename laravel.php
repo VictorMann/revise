@@ -1493,7 +1493,7 @@ DB::table('contacts')
 
  whereRaw()
 // consulta bruta não escapada (warnning Inject of SQL!)
-DB::table('contacts')->wherRaw('id = 12345')->get()
+DB::table('contacts')->whereRaw('id = 12345')->get()
 
  wherExists()
 // consulta WHERE EXISTS
@@ -2319,9 +2319,9 @@ $user->contacts()->attach([
 	2, 
 	3
 ])
-$user->contacts()->dettach(1)
-$user->contacts()->dettach([1, 2])
-$user->contacts()->dettach() // desanexa todos
+$user->contacts()->detach(1)
+$user->contacts()->detach([1, 2])
+$user->contacts()->detach() // desanexa todos
 
 // fazer alteração apenas no registro dinâmico
 $user->contacts()->updateExistingPivot($contactID, [
