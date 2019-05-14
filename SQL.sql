@@ -3421,5 +3421,13 @@ SELECT LEAST(34.0, 3.0, 5.0, 767.0);
 SELECT LEAST('B','A','C');
 --> 'A'
 
+--
+-- exibir lista de processos ativos
+--
+SHOW PROCESSLIST;
 
+--
+-- Mata processo
+--
+KILL <process_id>;
 

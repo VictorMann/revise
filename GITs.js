@@ -357,6 +357,9 @@ git reset --hard origin/master
 **/
 git rebase -i master
 
+// limpa arquivos temporarios que podem causar erros
+git clean -d -f
+
 
 
 
