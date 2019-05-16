@@ -351,6 +351,10 @@ ALTER TABLE employee CHANGE birthdate birth_date DATE NOT NULL;
 INSERT INTO person (person_id, fname, lname, gender, birth_date)
 VALUES (null, 'Hugo', 'Costa', 'M', '1996-03-05');
 
+-- inserindo com outra query
+CREATE TABLE tb (id INT, nome VARCHAR(10));
+INSERT INTO tb (id, nome) SELECT 1, 'a';
+
 -- atualizando dados
 UPDATE person
 SET street = '1225 Carabujam Est.',
@@ -1930,6 +1934,15 @@ SELECT STR_TO_DATE('September 15, 2001', '%M %d, %Y');
 +------------------------------------------------+
 | 2001-09-15                                     |
 +------------------------------------------------+
+
+-- Formata Data
+SELECT DATE_FORMAT('2019-09-15', "%M %d, %Y");
++----------------------------------------+
+| DATE_FORMAT('2019-09-15', "%M %d, %Y") |
++----------------------------------------+
+| September 15, 2019                     |
++----------------------------------------+
+
 /*
 	%a	->	Sun, Mon, ...
 	%b	->	Jan, fev, ...
@@ -2024,13 +2037,35 @@ SELECT EXTRACT(YEAR FROM '2008-09-18 22:19:05');
 -- Funções temporais que retornam números
 
 -- retorna o num de dias entre duas datas
-SELECT DATEDIFF('2009-09-03', '2009-06-24');
+SELECT DATEDIFF('2019-05-16', '2019-05-15');
 +--------------------------------------+
-| DATEDIFF('2009-09-03', '2009-06-24') |
+| DATEDIFF('2019-05-16', '2019-05-15') |
 +--------------------------------------+
-|                                   71 |
+|                                    1 |
 +--------------------------------------+
 
+-- retorna o num em tempo entre duas datas
+SELECT TIMEDIFF('2019-05-16 00:00:00', '2019-05-15 23:59:59');
++--------------------------------------------------------+
+| TIMEDIFF('2019-05-16 00:00:00', '2019-05-15 23:59:59') |
++--------------------------------------------------------+
+| 00:00:01                                               |
++--------------------------------------------------------+
+SELECT TIMEDIFF('10:20:35', '09:55:00');
++----------------------------------+
+| TIMEDIFF('10:20:35', '09:55:00') |
++----------------------------------+
+| 00:25:35                         |
++----------------------------------+
+
+
+-- conterversões TIME_TO_SEC | SEC_TO_TIME
+SELECT TIME_TO_SEC('00:01:00');
++-------------------------+
+| TIME_TO_SEC('00:01:00') |
++-------------------------+
+|                      60 |
++-------------------------+
 
 -- Funções de conversão
 
