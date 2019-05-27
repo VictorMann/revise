@@ -371,6 +371,9 @@ WHERE person_id = 1;
 DELETE FROM person
 WHERE person_id = 1;
 
+-- exclui dados e reseta auto_increment
+TRUNCATE TABLE `mailing_clientes`;
+
 -- converção de data
 UPDATE person
 SET birth_date = STR_TO_DATE('DEC-10-2017', '%b-%d-%Y')

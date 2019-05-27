@@ -14,7 +14,7 @@
 __
 
 //Instalação Laravel
-composer create-project laravel/laravel projectName --prefer-dist
+composer create-project laravel/laravel telefonia2 --prefer-dist
 
 
 // 
@@ -2807,7 +2807,8 @@ $req->secure()
 $req->isJson()
 // boolean se aceita um tipo especifico de conteúdo 
 $req->accepts()
-
+// pega o nome da rota
+$request->route()->getName() //> users.index
 
 	arquivos
 
