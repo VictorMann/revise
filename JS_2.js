@@ -984,9 +984,9 @@ function getViewportSize(w) {
 	// Para o IE (ou qualquer outro navegador) no modo Standars
 	var d = w.document;
 	if (document.compatMode == "CSS1Compat")
-		return { x: d.documentElement.clientWidth, y: d.documentElement.clientHeight };
+		return { w: d.documentElement.clientWidth, h: d.documentElement.clientHeight };
 	// Para navegadores no modo Quirks
-	return { x: d.body.clientWidth, y: d.body.clientHeight };
+	return { w: d.body.clientWidth, h: d.body.clientHeight };
 }
 
 
