@@ -2516,3 +2516,4 @@ $.get("http://localhost:3000/frases", trocaFraseAleatoria)
 
 
 
+

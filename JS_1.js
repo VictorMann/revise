@@ -1363,7 +1363,9 @@ function findall(a, x) {	// localiza todas as ocorrencias de um valor x em um ar
 	return result;
 }
 
-
+// fill() --> preenche os elemento do array com um valor
+a = new Array(3); //> [empty x 3] 
+a.fill(0)	      //> [0, 0, 0]
 
 
 	__TIPOS DE ARRAYS
