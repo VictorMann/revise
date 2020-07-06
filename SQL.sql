@@ -196,6 +196,8 @@ mysql -u root -p bank;
 
 -- cria um database
 CREATE DATABASE bank;
+-- deletar database
+DROP DATABASE bank;
 
 -- ** IMPORATAR DATABASE
 mysql -h host -u root -p < arquivo.sql
