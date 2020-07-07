@@ -10,26 +10,26 @@
  |------------------------------------------------------------------
  */
 
-// Conversão
-// Convert Sass to SCSS
-> sass-convert style.sass style.scss
+/* Conversão
+Convert Sass to SCSS
+/> sass-convert style.sass style.scss */
 
-// Convert SCSS to Sass
-> sass-convert style.scss style.sass
+/* Convert SCSS to Sass
+/> sass-convert style.scss style.sass */
 
-// Executando
-> sass input.scss output.css
+/* Executando
+> sass input.scss output.css */
 
-// --watch : fica verificando qualquer alteração
-> sass --watch input.scss:output.css
+/* --watch : fica verificando qualquer alteração
+/> sass --watch input.scss:output.css */
 
-// Analisar dir inteiro
-> sass --watch app/sass:public/stylesheets
+/* Analisar dir inteiro
+/> sass --watch app/sass:public/stylesheets */
 
-// Help (para documentação completa)
-> sass --help
+/* Help (para documentação completa)
+> sass --help */
 
-// Nested Rules # Regras aninhadas
+/* Nested Rules # Regras aninhadas */
 #main p {
   color: #00ff00;
   width: 97%;
@@ -39,7 +39,7 @@
     color: #000000;
   }
 }
-//> output:
+/*/> output: */
 #main p {
   color: #00ff00;
   width: 97%;
@@ -48,7 +48,7 @@
   background-color: #ff0000;
   color: #000000;
 }
-// Exemplo 2
+/* Exemplo 2 */
 #main {
   width: 97%;
 
@@ -57,19 +57,19 @@
     a { font-weight: bold; }
   }
 }
-//>
+/*/>
 #main {width: 97%;}
 #main p, #main div {font-size: 2em;}
-#main p a, #main div a {font-weight: bold;}
+#main p a, #main div a {font-weight: bold;} */
 
-// Parent Selectors # Referenciando os Seletores dos Pais: &
+/* Parent Selectors # Referenciando os Seletores dos Pais: & */
 a {
   font-weight: bold;
   text-decoration: none;
   &:hover { text-decoration: underline; }
   body.firefox & { font-weight: normal; }
 }
-//>
+/*/> */
 a {
   font-weight: bold;
   text-decoration: none;
@@ -80,16 +80,16 @@ a:hover {
 body.firefox a {
   font-weight: normal;
 }
-// Exemplo 2
+/* Exemplo 2 */
 #main {
   color: black;
   &-sidebar { border: 1px solid; }
 }
-//>
+/*/> */
 #main {color: black;}
 #main-sidebar {border: 1px solid;}
 
-// Nested Properties # Propriedades aninhadas
+/* Nested Properties # Propriedades aninhadas */
 .funky {
   font: {
     family: fantasy;
@@ -97,28 +97,28 @@ body.firefox a {
     weight: bold;
   }
 }
-//>
+/*/> */
 .funky {
   font-family: fantasy;
   font-size: 30em;
   font-weight: bold;
 }
-// Exemplo 2
+/* Exemplo 2 */
 .funky {
   font: 20px/24px fantasy {
     weight: bold;
   }
 }
-//>
+/*/> */
 .funky {
   font: 20px/24px fantasy;
   font-weight: bold;
 }
 
-// Comentários
+/* Comentários
 
-// removido na saida
-/* preservado na saida */
+removido na saida
+preservado na saida */
 
 // O uso de ! no comentário de multiplas linhas preserva a saida dele mesmo no modo compressed
 $version: "1.2.3";
