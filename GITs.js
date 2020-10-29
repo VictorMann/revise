@@ -228,6 +228,8 @@ git checkout index.html
 	Apos o comando o git status indica q os 
 	arquivos estão no estado "Working Directory"
 */
+git reset HEAD -- index.html
+
 
 /***
 	Guardando alterações para mais tarde: git stash
