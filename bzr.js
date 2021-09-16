@@ -16,7 +16,7 @@ bzr diff
 
 
 // ver historico de commit da branch
-bzr log
+bzr log -l 3
 
 
 // publicando no Launchpad (necessário registrar uma chave SSH)
