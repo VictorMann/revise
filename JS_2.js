@@ -1842,6 +1842,10 @@ function addEvent(target, type, handler) {
 			});
 }
 
+function delEvent(target, type, handler) {
+	if (target.removeEventListener) target.removeEventListener(type, handler, false);
+	else target.detachEvent("on" + type, handler);
+}
 
 // Escopo de rotina de tratamento de evento
 

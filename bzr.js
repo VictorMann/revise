@@ -25,3 +25,7 @@ bzr log -l 3
 // uma chave SSH em seu próprio computador, executando o comando:
 // $ ssh-keygen
 bzr launchpad-login john.doe
+
+
+// copia branch
+bzr branch . ..\<NOVA_DIR_BRANCH>
