@@ -49,3 +49,38 @@ bzr commit -m "Reverted the last commit"
 bzr revert -r REVISION
 bzr commit -m "Reverted to revision REVISION"
 
+// O comando bzr shelve e bzr unshelve no Bazaar permite 
+// que você guarde temporariamente as mudanças não commitadas, semelhante ao git stash.
+bzr shelve --all --message "texto se quiser"
+
+// Para restaurar (aplicar) as mudanças shelved de volta ao seu diretório de trabalho, use:
+bzr unshelve
+
+// Deletar um shelve específico:
+bzr shelve --drop 1
+
+// Deleta todos os shelves
+bzr shelve --drop
+
+// Usar uma Branch Separada
+// Criar uma nova branch:
+bzr branch . ../minha-branch-temp
+
+// Commitar as mudanças na nova branch
+cd ../minha-branch-temp
+bzr add
+bzr commit -m "Mudanças temporárias"
+
+// Voltar para a branch original:
+// Isso reverte seu diretório de trabalho para o estado limpo da última revisão commitada.
+cd ..
+bzr revert
+
+// Reintegrar as mudanças mais tarde:
+// Quando você estiver pronto para trazer de volta as mudanças da branch temporária, pode fazer um merge:
+bzr merge ../minha-branch-temp
+
+
+// Restaura todo o estado de commits local com o remoto
+bzr revert
+bzr pull --overwrite
