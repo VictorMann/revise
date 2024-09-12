@@ -365,7 +365,8 @@ git clean -d -f
 // Exibe arquivos em conflito
 git diff --name-only --diff-filter=U
 
-
+// Exibir arquivos apenas no Index "aqueles que adicionados com [git add] ou seja prontos para o commit"
+git diff --name-only --cached
 
 
 
