@@ -84,3 +84,20 @@ bzr merge ../minha-branch-temp
 // Restaura todo o estado de commits local com o remoto
 bzr revert
 bzr pull --overwrite
+
+
+## CHECKOUT
+
+bzr checkout bzr://10.150.10.10/basic/prod-v1.0.0
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+## MERGE
+
+bzr merge ../../trunk -r 0..-1
+
+O comando deve ser bzr merge ../../trunk -r 0..-1. Especificar o intervalo de revisões de 0 (início do histórico) e até a revisão mais recente (-1) permitirá que você mescle 2 ramos não relacionados.
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+PROBLEMA DE LOCK
+
+Usar:
+
+bzr break-lock --force

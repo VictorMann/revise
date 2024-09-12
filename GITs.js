@@ -362,6 +362,8 @@ git rebase -i master
 // limpa arquivos temporarios que podem causar erros
 git clean -d -f
 
+// Exibe arquivos em conflito
+git diff --name-only --diff-filter=U
 
 
 
