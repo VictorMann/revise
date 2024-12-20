@@ -351,7 +351,7 @@ git reset HEAD -- index.html
 	Restaura todo o estado de commits local com o remoto
 **/
 git fetch --all
-git reset --hard origin/master
+git reset --hard origin/main
 
 /**
 	Mescla commits em um só
