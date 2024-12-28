@@ -369,5 +369,10 @@ git diff --name-only --diff-filter=U
 git diff --name-only --cached
 
 
-
+// Como ignorar um arquivo após o commit
+git rm --cached debug.log
+// ignorar diretório
+git rm --cached build/
+// necessário commit em seguida
+git commit -m "Start ignoring debug.log"
 
