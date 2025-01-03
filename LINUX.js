@@ -92,10 +92,14 @@ more id_ed25519.pub
 
 ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIPWU7lOLysjHYaJrCDSdGU258dEGnFHcB/YOO/l/+V+h
  lp.log.planning@gmail.com
- 
-// Extrair aruqivo .tar
 
-tar -xvf file.tar
+// Compacta arquivos para .tar
+
+tar -cvf reports.tar /Reports
+ 
+// Extrair arquivos .tar
+
+tar -xvf reports.tar
 
 // Remove Diretorios cheios -r (recursivo) -f (Força remoção)
 
